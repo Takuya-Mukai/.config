@@ -1,0 +1,42 @@
+// -*- mode: jsonc -*-
+[
+  {
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 40, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "hyprland/workspaces",
+        "clock#time",
+        //"hyprland/scratchpad",
+        "clock#date",
+        "custom/media"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        //"mpd",
+        "idle_inhibitor",
+        "pulseaudio",
+        "power-profiles-daemon",
+        "network",
+        "cpu",
+        "memory",
+        "temperature",
+        //"monitor",
+        //"backlight",
+        //"keyboard-state",
+        //"hyprland/language",
+        //"battery",
+        //"battery#bat2",
+        "tray",
+        "custom/power",
+    ],
+    "include": [
+	"$HOME/.config/waybar/modules.jsonc"
+    ] //include the moduleconfig
+  }
+]
