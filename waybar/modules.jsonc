@@ -99,11 +99,11 @@
     },
       "format": "{cpu}{memory}{temperature}",
       "cpu": {
-          "format": "<span color=\"#7aa2f7\">   </span>{usage}%",
-          "tooltip": false
+          "format": "<span color=\"#7aa2f7\">  </span>{usage}%",
+          "tooltip": true,
       },
       "memory": {
-          "format": "<span color=\"#7aa2f7\">   </span>{used}GiB"
+          "format": "<span color=\"#7aa2f7\">  </span>{used}GiB"
       },
       "temperature": {
           // "thermal-zone": 2,
@@ -159,7 +159,7 @@
         "tooltip-format": " <span color=\"#7aa2f7\"></span> ",
         "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
         "format-linked": " <span color=\"#7aa2f7\"></span> ",
-        "format-disconnected": " <span color=\"#e0af68\">⚠</span> ",
+        "format-disconnected": " <span color=\"#e0af68\"></span> ",
         //"format-alt": " {ifname}: {ipaddr}/{cidr} ",
         "on-click": "foot nmtui",
     },

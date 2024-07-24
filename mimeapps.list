@@ -3,3 +3,4 @@
 application/pdf=org.gnome.Evince.desktop
 image/png=sxiv.desktop
 x-scheme-handler/remnote=RemNote.desktop
+x-scheme-handler/obsidian=obsidian.desktop

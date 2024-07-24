@@ -53,6 +53,7 @@ require("catppuccin").setup({
       enabled = true,
       indentscope_color = "",
     },
+    rainbow_delimiters = true,
     -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
   },
 })

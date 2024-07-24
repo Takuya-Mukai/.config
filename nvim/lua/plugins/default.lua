@@ -147,7 +147,12 @@ return {
     dependencies = {
       'hrsh7th/cmp-nvim-lsp',
       'williamboman/mason-lspconfig.nvim',
-      {'neovim/nvim-lspconfig', config = function() require 'plugins-config.nvim-lspconfig' end},
+      {
+        'neovim/nvim-lspconfig',
+        config = function()
+          require 'plugins-config.nvim-lspconfig'
+        end
+      },
     },
     -- lazy = true,
     cmd = {
