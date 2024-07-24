@@ -214,20 +214,19 @@ return {
           dependencies = 'copilot.lua',
           config = function() require('copilot_cmp').setup() end,
           lazy = true,
+          cmd = "CS",
         },
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-path',
+        'hrsh7th/cmp-cmdline',
       },
     }
   },
   {
     "zbirenbaum/copilot.lua",
     lazy = true,
-    cmd = "Copilot",
     config = function()
-      require("copilot").setup({
-        copilot_node_command = 'node'
-      })
+      require("plugins-config.copilot")
     end,
   },
   {

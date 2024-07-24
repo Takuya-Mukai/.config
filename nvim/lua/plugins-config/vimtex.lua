@@ -1,6 +1,7 @@
 vim.g.vimtex_view_method = "general"
-vim.g.vimtex_view_general_viewer = "evince"
-vim.g.vimtex_view_general_options = ''
+vim.g.vimtex_view_general_viewer = "okular"
+vim.g.vimtex_view_general_options = "--unique file:@pdf#src:@line@tex"
+-- vim.g.vimtex_compiler_latexmk_engines = "-lualatex"
 vim.g.vimtex_compiler_latexmk = {
   aux_dir = '',
   out_dir = '',
@@ -9,7 +10,8 @@ vim.g.vimtex_compiler_latexmk = {
   executable = 'latexmk',
   hooks = {},
   options = {
-    '-pdflua',
+    '-pdf',
+    '-pdflatex=lualatex',
     '-verbose',
     '-file-line-error',
     '-synctex=1',
