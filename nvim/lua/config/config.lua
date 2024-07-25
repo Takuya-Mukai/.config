@@ -17,7 +17,7 @@ vim.o.showmatch = true
 vim.o.matchtime = 1
 vim.bo.softtabstop = 2
 vim.opt.laststatus = 3
-vim.opt.conceallevel = 3
+vim.opt.conceallevel = 2
 vim.o.helplang = "ja,en"
 vim.api.nvim_set_option_value("signcolumn", "yes:1", {})
 vim.api.nvim_set_option_value("clipboard", "unnamedplus", {})
@@ -48,3 +48,5 @@ vim.cmd("autocmd TermOpen * setlocal norelativenumber")
 -- Example for configuring Neovim to load user-installed installed Lua rocks:
 package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
 package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
+-- Vimscript コマンドを Lua から実行
+vim.cmd('let g:denops#deno = "/home/muta/.deno/bin/deno"')
