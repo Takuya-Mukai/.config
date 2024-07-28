@@ -1,6 +1,9 @@
+[Added Associations]
+text/x-python3=nvim-2.desktop;
 
 [Default Applications]
 application/pdf=org.gnome.Evince.desktop
 image/png=sxiv.desktop
-x-scheme-handler/remnote=RemNote.desktop
+text/x-python3=nvim-2.desktop;
 x-scheme-handler/obsidian=obsidian.desktop
+x-scheme-handler/remnote=RemNote.desktop
