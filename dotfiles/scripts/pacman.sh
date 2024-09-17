@@ -28,9 +28,11 @@ yay -S fish neovim tmux ripgrep yazi kitty curl latex-mk npm nodejs --noanswercl
 # install for neovim
 yay -S metalua penlight luarocks cmake --noanswerclean --noanswerdiff
 # install japanese input and font
-yay -S fcitx5-im fcitx5-skk noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd otf-font-awesome  --noanswerclean --noanswerdiff
+yay -S fcitx5-im fcitx5-cskk noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd otf-font-awesome  --noanswerclean --noanswerdiff
 # install gui tools
-yay -S vivaldi vivaldi-ffmpeg-codecs webcord btop spotify vlc swayimg obsidian qalculate-gtk --noanswerclean --noanswerdiff
+yay -S vivaldi vivaldi-ffmpeg-codecs google-chrome webcord btop spotify vlc swayimg obsidian qalculate-gtk --noanswerclean --noanswerdiff
+# install theme
+yay -S catppuccin-gtk-theme-mocha
 # install for btop
 yay -S rocm-smi-lib --noanswerclean --noanswerdiff
 # document tool
