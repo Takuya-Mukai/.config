@@ -10,7 +10,7 @@ cd ~
 # install essential packages
 yay -S /mnt base base-devel linux linux-firmware linux-headers openssh --noanswerclean --noanswerdiff
 # install network and security tools
-yay -S ufw gufw kesl network-manager-applet bluez bluez-utils openvpn --noanswerclean --noanswerdiff
+yay -S ufw gufw kesl networkmanager nm-connection-editor network-manager-applet bluez bluez-utils openvpn --noanswerclean --noanswerdiff
 # install other desktop tools
 yay -S anyrun-git ags waybar wl-clipboard --noanswerclean --noanswerdiff
 # install audio server
