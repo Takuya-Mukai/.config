@@ -1,0 +1,128 @@
+@import "./mocha.css";
+* {
+  font-family: Font Awesome;
+  font-weight: 500;
+  font-size: 9.0pt;
+  color: @text;
+  
+}
+
+/* main waybar */
+window#waybar {
+  background: rgba(30, 30, 30, 0.0);
+}
+
+/* when hovering over modules */
+tooltip {
+  background: #1e1e2e;
+  border-radius: 5%;
+}
+
+#workspaces button {
+  padding: 6px;
+}
+
+/* Sets active workspace to have a solid line on the bottom */
+#workspaces button.active {
+  border-bottom: 2px solid @mauve;
+  /*border-radius: 0px 10px 0px 0px;*/
+  margin-top: 0px;
+  margin-left: 0px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* More workspace stuff for highlighting on hover */
+#workspaces button.focused {
+  color: #a6adc8;
+}
+
+#workspaces button.urgent {
+  color: @red;
+}
+
+#workspaces button:hover {
+  /*background: #11111b;*/
+  color: #cdd6f4;
+}
+
+/* Sets background, padding, margins, and borders for (all) modules */
+#workspaces,
+#clock {
+  padding-left: 4px;
+  padding-right: 4px;
+  background: rgba(30, 30, 30, 0.0);
+  border-radius: 9px;
+}
+#window,
+#temperature,
+#cpu {
+  margin-left: 4px;
+  margin-right: 0px;
+  border-radius: 10px 10px 10px 10px;
+  /*background: rgba(30, 30, 30, 0.55);*/
+  padding-right: 6px;
+  padding-left: 6px;
+}
+#memory {
+  margin: 0;
+  /*background: rgba(30, 30, 30, 0.55);*/
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 10px;
+}
+#wireplumber,
+#tray,
+#workspaces {
+  padding-right: 0px;
+  padding-left: 2px;
+  /*border-radius: 0px 10px 10px 0px;*/
+}
+
+/* Hide window module when not focused on window or empty workspace */
+window#waybar.empty #window {
+  padding: 0px;       
+  margin: 0px;
+  opacity: 0;
+}
+
+/* Set up rounding to make these modules look like separate pills */
+#tray {
+  border-radius: 10px 0px 0px 10px;
+  margin-left: 4px;
+  padding-left: 7px;
+  padding-right: 4px;
+  margin-right: 0px;
+}
+#network {
+  /*background: rgba(26, 27, 38, 0);*/
+  border-radius: 10px;
+  margin-right: 4px;
+}
+
+#window {
+  border-radius: 10px;
+  padding: 6px;
+
+}
+
+/* close right side of bar */
+#temperature {
+  border-radius: 10px 10px 10px 10px;
+  padding: 6px;
+  margin-left: 0px;
+}
+
+/* close left side of bar */
+#battery {
+  border-radius: 0px 12px 12px 0px;
+}
+
+#pulseaudio {
+  /*background: rgba(26, 27, 38, 0);*/
+  border-radius: 10px;
+}
+#custome {
+  background: rgba(26, 27, 38, 0);
+  border-radius: 10px 0px 0px 10px;
+  padding-right: 10px;
+}
