@@ -2,7 +2,7 @@
 * {
   font-family: Font Awesome;
   font-weight: 500;
-  font-size: 9.0pt;
+  font-size: 10.0pt;
   color: @text;
   
 }
@@ -14,12 +14,12 @@ window#waybar {
 
 /* when hovering over modules */
 tooltip {
-  background: #1e1e2e;
+  /*background: #1e1e2e;*/
   border-radius: 5%;
 }
 
 #workspaces button {
-  padding: 6px;
+  padding: 3px;
 }
 
 /* Sets active workspace to have a solid line on the bottom */
@@ -46,7 +46,7 @@ tooltip {
 }
 
 /* Sets background, padding, margins, and borders for (all) modules */
-#workspaces,
+/*#workspaces,*/
 #clock {
   padding-left: 4px;
   padding-right: 4px;
@@ -60,18 +60,22 @@ tooltip {
   margin-right: 0px;
   border-radius: 10px 10px 10px 10px;
   /*background: rgba(30, 30, 30, 0.55);*/
-  padding-right: 6px;
+  padding-right: 3px;
   padding-left: 6px;
 }
 #memory {
   margin: 0;
   /*background: rgba(30, 30, 30, 0.55);*/
-  padding-left: 6px;
+  padding-left: 3px;
   padding-right: 6px;
   border-radius: 10px;
 }
 #wireplumber,
-#tray,
+#tray{
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
 #workspaces {
   padding-right: 0px;
   padding-left: 2px;
@@ -108,7 +112,7 @@ window#waybar.empty #window {
 /* close right side of bar */
 #temperature {
   border-radius: 10px 10px 10px 10px;
-  padding: 6px;
+  padding: 3px;
   margin-left: 0px;
 }
 
@@ -121,8 +125,9 @@ window#waybar.empty #window {
   /*background: rgba(26, 27, 38, 0);*/
   border-radius: 10px;
 }
-#custome {
-  background: rgba(26, 27, 38, 0);
+#custom-notification {
+  /*background: rgba(26, 27, 38, 0);*/
   border-radius: 10px 0px 0px 10px;
-  padding-right: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
 }

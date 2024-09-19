@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
     // Modules configuration
-    // "hyprland/workspaces": {
+    // "sway/workspaces": {
     //     "disable-scroll": true,
     //     "all-outputs": true,
     //     "warp-on-scroll": false,
@@ -26,7 +26,7 @@
             "unlocked": ""
         }
     },
-    "hyprland/mode": {
+    "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
     "tray": {
@@ -53,7 +53,6 @@
           "days": "<span color='#c0caf5'><b>{}</b></span>",
           "weeks": "<span color='#cba6f7'><b>W{}</b></span>",
           "weekdays": "<span color='#fab387'><b>{}</b></span>",
-//"weekdays": "<span color='#fab387'><b>Sun</b></span><span color='#fab387'><b>Mon</b></span><span color='#fab387'><b>Tue</b></span><span color='#fab387'><b>Wed</b></span><span color='#fab387'><b>Thu</b></span><span color='#fab387'><b>Fri</b></span><span color='#fab387'><b>Sat</b></span>",
           "today": "<span color='#f38ba8'><b><u>{}</u></b></span>",
         },
       },
@@ -94,26 +93,26 @@
         //"format-alt": " {ifname}: {ipaddr}/{cidr} ",
         "on-click":"nm-connection-editor",
     },
-    "pulseaudio": {
-         "scroll-step": 1, // %, can be a float
-        //"format": "{volume}% {icon} {format_source}",
-        "format": "<span color=\"#cba6f7\">{icon} </span>{volume}%  {format_source}",
-        "format-bluetooth": "<span color=\"#cba6f7\">{icon} <span color=\"#89b4fa\"></span>{volume}%  {format_source}",
-        "format-bluetooth-muted": "<span color=\"#cba6f7\"> {icon}</span>  {format_source}",
-        "format-muted": "<span color= \"#cba6f7\"> </span>{format_source}",
-        "format-source": "<span color=\"#cba6f7\"></span> {volume}% ",
-        "format-source-muted": "<span color=\"#cba6f7\"></span>",
-        "format-icons": {
-            "headphone": "<span color=\"#cba6f7\"></span>",
-            "hands-free": "<span color=\"#cba6f7\"></span>",
-            "headset": "<span color=\"#cba6f7\"></span>",
-            "phone": "<span color=\"#cba6f7\"></span>",
-            "portable": "<span color=\"#cba6f7\"></span>",
-            "car": "<span color=\"#cba6f7\"></span>",
-            "default": ["", " ", "  "]
-        },
-        "on-click": "pavucontrol"
-    },
+    //"pulseaudio": {
+    //     "scroll-step": 1, // %, can be a float
+    //    //"format": "{volume}% {icon} {format_source}",
+    //    "format": "<span color=\"#cba6f7\">{icon} </span>{volume}%  {format_source}",
+    //    "format-bluetooth": "<span color=\"#cba6f7\">{icon} <span color=\"#89b4fa\"></span>{volume}%  {format_source}",
+    //    "format-bluetooth-muted": "<span color=\"#cba6f7\"> {icon}</span>  {format_source}",
+    //    "format-muted": "<span color= \"#cba6f7\"> </span>{format_source}",
+    //    "format-source": "<span color=\"#cba6f7\"></span> {volume}% ",
+    //    "format-source-muted": "<span color=\"#cba6f7\"> </span>",
+    //    "format-icons": {
+    //        "headphone": "<span color=\"#cba6f7\"> </span>",
+    //        "hands-free": "<span color=\"#cba6f7\"> </span>",
+    //        "headset": "<span color=\"#cba6f7\"> </span>",
+    //        "phone": "<span color=\"#cba6f7\"> </span>",
+    //        "portable": "<span color=\"#cba6f7\"> </span>",
+    //        "car": "<span color=\"#cba6f7\"> </span>",
+    //        "default": [" ", " ", "  "]
+    //    },
+    //    "on-click": "pavucontrol"
+    //},
     "wireplumber": {
       "format": "<span color= \"#cba6f7\">{icon}</span>{volume}%",
       "format-muted": "<span color= \"#cba6f7\"> </span>",
@@ -135,7 +134,7 @@
       "exec-if": "pgrep spotify"
     },
 
-      "custom/power": {
+    "custom/power": {
       "format": "<span color=\"#cba6f7\">  </span>",
       "on-click": "rofi -show power-menu -modi power-menu:rofi-power-menu"
     },
@@ -143,8 +142,29 @@
       "icon-size": 14,
       "spacing": 4,
     },
-    "hyprland/workspaces": {
-      "disable-scroll": true,
-      "on-click": "activate",
+    "sway/workspaces": {
+      "format": "{icon}",
+      //"disable-scroll": true,
+      //"on-click": "activate",
+    },
+    "custom/notification": {
+      "tooltip": false,
+      "format": "{icon}",
+      "format-icons": {
+        "notification": "<span color=\"#f9e2af\"> </span>,<span foreground=\"#f38ba8\"><sup></sup></span>",
+        "none": "<span color=\"#f9e2af\"> </span>",
+        "dnd-notification": "<span color=\"#f9e2af\"></span> </span>,<span foreground=\"#f38ba8\"><sup></sup></span>",
+        "dnd-none": "<span color=\"#f9e2af\"> </span>",
+        "inhibited-notification": "<span color=\"#f9e2af\"> </span>,<span foreground=\"#f38ba8\"><sup></sup></span>",
+        "inhibited-none": "<span color=\"#f9e2af\"> </span>",
+        "dnd-inhibited-notification": "<span color=\"#f9e2af\"> </span>,<span foreground=\"#f38ba8\"><sup></sup></span>",
+        "dnd-inhibited-none": "<span color=\"#f9e2af\"> </span>"
+      },
+      "return-type": "json",
+      "exec-if": "which swaync-client",
+      "exec": "swaync-client -swb",
+      "on-click": "swaync-client -t -sw",
+      "on-click-right": "swaync-client -d -sw",
+      "escape": true
     },
 }

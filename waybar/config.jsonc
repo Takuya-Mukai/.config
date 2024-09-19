@@ -8,19 +8,20 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/scratchpad",
+        "sway/workspaces",
+        "sway/scratchpad",
         "clock#time",
         "clock#date",
     ],
     "modules-center": [
-        "custom/spotify",
+        //"custom/spotify",
+        "sway/window"
     ],
     "modules-right": [
         //"mpd",
         "power-profiles-daemon",
-        //"wireplumber",
-        "pulseaudio",
+        "wireplumber",
+        //"pulseaudio",
         "network",
         "cpu",
         "memory",
@@ -28,11 +29,12 @@
         //"monitor",
         //"backlight",
         //"keyboard-state",
-        //"hyprland/language",
+        //"sway/language",
         //"battery",
         //"battery#bat2",
         "tray",
-        "custom/power",
+        //"custom/power",
+        "custom/notification",
     ],
     "include": [
 	"$HOME/.config/waybar/modules.jsonc"

@@ -8,34 +8,37 @@ cd yay
 makepkg -si
 cd ~
 # install essential packages
-yay -S /mnt base base-devel linux linux-firmware linux-headers openssh --noanswerclean --noanswerdiff
+yay -S /mnt base base-devel linux linux-firmware linux-headers openssh --noconfirm
 # install network and security tools
-yay -S ufw gufw kesl networkmanager nm-connection-editor network-manager-applet bluez bluez-utils openvpn --noanswerclean --noanswerdiff
+yay -S ufw gufw networkmanager nm-connection-editor bluez bluez-utils openvpn --noconfirm
 # install other desktop tools
-yay -S anyrun-git ags waybar wl-clipboard --noanswerclean --noanswerdiff
+yay -S anyrun-git ags waybar --noconfirm
 # install audio server
-yay -S pipewire pavucontrole wireplumber helvume --noanswerclean --noanswerdiff
-# install xdg desktop portal
-yay -S xdg-desktop-portal-hyprland xdg-desktop-portal-gtk --noanswerclean --noanswerdiff
+yay -S pipewire pavucontrole wireplumber helvume --noconfirm
 # install authentication agent
-yay -S polkit-kde-agent --noanswerclean --noanswerdiff
+yay -S polkit-kde-agent --noconfirm
 # install qt wayland support
-yay -S qt5-wayland qt6-wayland --noanswerclean --noanswerdiff
+yay -S qt5-wayland qt6-wayland --noconfirm
 # install theme settings
-yay -S nwg-look qt6ct qt5ct --noanswerclean --noanswerdiff
+yay -S nwg-look qt6ct qt5ct --noconfirm
 # install cli tools
-yay -S fish neovim tmux ripgrep yazi kitty curl latex-mk npm nodejs --noanswerclean --noanswerdiff
+yay -S fish neovim tmux ripgrep yazi kitty curl texlive npm nodejs lazygit --noconfirm
 # install for neovim
-yay -S metalua penlight luarocks cmake --noanswerclean --noanswerdiff
+yay -S metalua penlight luarocks cmake --noconfirm
 # install japanese input and font
-yay -S fcitx5-im fcitx5-cskk noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd otf-font-awesome  --noanswerclean --noanswerdiff
+yay -S fcitx5-im fcitx5-cskk noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd otf-font-awesome  --noconfirm
 # install gui tools
-yay -S vivaldi vivaldi-ffmpeg-codecs google-chrome webcord btop spotify vlc swayimg obsidian qalculate-gtk --noanswerclean --noanswerdiff
+yay -S vivaldi vivaldi-ffmpeg-codecs google-chrome webcord btop spotify vlc swayimg obsidian qalculate-gtk thunderbird github-desktop keypassxc
 # install theme
-yay -S catppuccin-gtk-theme-mocha
+yay -S catppuccin-gtk-theme-mocha catppuccin-cursors-mocha catppuccin-fcitx5-git papirus-folders-catppuccin-git btop-theme-catppuccin --noconfirm
 # install for btop
-yay -S rocm-smi-lib --noanswerclean --noanswerdiff
+yay -S rocm-smi-lib --noconfirm
 # document tool
-yay -S evince --noanswerclean --noanswerdiff
+yay -S zathura --noconfirm
 # install hyprland
-yay -S hyprland hyprcursor hyprpaper hyprshot hypridle hyprlock hyprshade thunar --noanswerclean --noanswerdiff
+# yay -S hyprland hyprcursor hyprpaper hyprshot hypridle hyprlock hyprshade thunar clipse --noanswerclean --noanswerdiff
+yay -S sway swaybg scdoc copyq swaylock-effects-git swayidle wdisplay sov workstyle nwg-displays --noconfirm
+# install tools for screenshot
+yay -S grim slurp swappy
+# for screen share
+yay -S xdg-desktop-portal-wlr

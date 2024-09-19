@@ -66,6 +66,6 @@ return {
     'WhoIsSethDaniel/mason-tool-installer.nvim',
     dependencies = 'williamboman/mason.nvim',
     config = function() require 'plugins-config.lsp.mason-tool-installer' end,
-    lazy=true,
+    -- lazy=true,
   }
 }
