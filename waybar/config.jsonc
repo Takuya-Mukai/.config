@@ -19,7 +19,8 @@
     ],
     "modules-right": [
         //"mpd",
-        "power-profiles-daemon",
+        //"power-profiles-daemon",
+        "custom/wl-gammarelay-applet",
         "wireplumber",
         //"pulseaudio",
         "network",
