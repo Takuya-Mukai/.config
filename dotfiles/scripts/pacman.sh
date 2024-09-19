@@ -22,13 +22,13 @@ yay -S qt5-wayland qt6-wayland --noconfirm
 # install theme settings
 yay -S nwg-look qt6ct qt5ct --noconfirm
 # install cli tools
-yay -S fish neovim tmux ripgrep yazi kitty curl texlive npm nodejs lazygit --noconfirm
+yay -S fish neovim tmux ripgrep yazi kitty curl texlive npm nodejs lazygit udiskie --noconfirm
 # install for neovim
 yay -S metalua penlight luarocks cmake --noconfirm
 # install japanese input and font
 yay -S fcitx5-im fcitx5-cskk noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd otf-font-awesome  --noconfirm
 # install gui tools
-yay -S vivaldi vivaldi-ffmpeg-codecs google-chrome webcord btop spotify vlc swayimg obsidian qalculate-gtk thunderbird github-desktop keypassxc
+yay -S vivaldi vivaldi-ffmpeg-codecs google-chrome webcord btop spotify vlc swayimg obsidian qalculate-gtk thunderbird github-desktop keypassxc selectdefaultapplication-git --noconfirm
 # install theme
 yay -S catppuccin-gtk-theme-mocha catppuccin-cursors-mocha catppuccin-fcitx5-git papirus-folders-catppuccin-git btop-theme-catppuccin --noconfirm
 # install for btop
@@ -41,4 +41,4 @@ yay -S sway swaybg scdoc copyq swaylock-effects-git swayidle wdisplay sov workst
 # install tools for screenshot
 yay -S grim slurp swappy
 # for screen share
-yay -S xdg-desktop-portal-wlr
+yay -S xdg-desktop-portal-wlr xdg-desktop-portal xwaylandvideobridge 

@@ -1,6 +1,5 @@
 fcitx/
 pulse/
-fcitx5/
 ibus/
 yay/
 lazygit/
@@ -64,13 +63,14 @@ WebCord/
 gtk-3.0/
 libfm/
 neovide/
-nwg-look/
 xsettingsd/
 QtProject.conf
 dolphinrc
-mimeapps.list
 GitHub Desktop/
 keepassxc/
-nwg-*/
+nwg-drawer/
+nwg-dock/
+nwg-launchers/
+nwg-look/
 vlc/
 

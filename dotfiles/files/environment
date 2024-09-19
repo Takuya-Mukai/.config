@@ -1,1 +1,7 @@
 XMODIFIERS=@im=fcitx
+QT_IM_MODUE=fcitx
+QT_QPA_PLATFORMTHEME=qt6ct
+EDITOR=nvim
+BROWSER=vivaldi
+TERMINAL=kitty
+XDG_CONFIG_HOME=@{HOME}/.config
