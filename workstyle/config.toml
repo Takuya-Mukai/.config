@@ -10,6 +10,7 @@
 # precedence is given in order of apparition in this file.
 
 # about contents
+"rnote" = ""
 "github" = ""
 "arch" = "󰣇"
 "rust" = ""
@@ -28,6 +29,7 @@
 "alacritty" = " "
 "firefox" = ""
 "chrome" = ""
+"chromium" = ""
 "vivaldi-stable" = ""
 "file manager" = ""
 "gthumb" = ""
@@ -61,7 +63,8 @@
 "keepassxc" = ""
 "helvum" = "󱘖"
 "steam" = ""
+"timeshift" = "󱫭"
 [other]
 fallback_icon = ""
 deduplicate_icons = false
-separator = " "
+separator = ": "

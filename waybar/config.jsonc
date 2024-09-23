@@ -5,9 +5,10 @@
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     //"height": 40, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 2, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "group/group-power",
         "sway/workspaces",
         "sway/scratchpad",
         "clock#time",
@@ -15,12 +16,12 @@
     ],
     "modules-center": [
         //"custom/spotify",
-        "sway/window"
+        "sway/mode",
+        "sway/window",
     ],
     "modules-right": [
         //"mpd",
         //"power-profiles-daemon",
-        "custom/wl-gammarelay-applet",
         "wireplumber",
         //"pulseaudio",
         "network",

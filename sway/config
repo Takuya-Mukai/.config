@@ -17,7 +17,7 @@ set $right l
 # Your preferred terminal emulator
 set $term kitty
 # set $browser vivaldi --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime %U
-set $browser vivaldi
+set $browser chromium
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -48,15 +48,17 @@ output * bg ~/.config/sway/backgrounds/Fantasy-Lanscape-Night.png fill
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
-exec fcitx5
+exec_always fcitx5
 # exec wl-paste --type text --watch clipist store
 # exec wl-paste --type image --watch clipist store
 exec copyq --start-server
-exec copyq menu
+# exec copyq menu
 exec udiskie
 exec clipse -listen
 exec swaync
 exec_always --no-startup-id workstyle &> /tmp/workstyle.log
+exec syncthing
+exec polkit-kde-agent
 ### Input configuration
 #
 # Example configuration:
@@ -247,10 +249,12 @@ client.background        $base
 #
 #opacity
 #
-set $opacity 0.9
 for_window {
+  set $opacity 0.9
   [class=".*"] opacity $opacity
   [app_id="wl-gammarelay-applet"] floating enable, move position, cursor move up 20
   [app_id="one.alynx.showmethekey" title="Floating Window - Show Me The Key"] floating enable, sticky enable
+  [title="btop$"] floating enable
+  [title="Pentablet"] floating eneble, sticky enable
 }
 include /etc/sway/config.d/*

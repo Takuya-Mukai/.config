@@ -30,13 +30,14 @@
         "format": "<span style=\"italic\">{}</span>"
     },
     "tray": {
-        // "icon-size": 21,
-        "spacing": 10
+        "icon-size": 21,
+        "spacing": 15,
     },
     "clock#time": {
         // "timezone": "America/New_York",
-      "format": "<span color=\"#cba6f7\">󰥔   </span>{:%H:%M}",
+      "format": "<span color=\"#cba6f7\">󰥔  </span>{:%H:%M}",
       "interval": 60,
+      "tooltip": false,
     },
     "clock#date": {
       "format": "<span color=\"#cba6f7\">   </span>{:%Y/%m/%d}",
@@ -57,21 +58,32 @@
         },
       },
     },
-      "format": "{cpu}{memory}{temperature}",
-      "cpu": {
-          "format": "<span color=\"#cba6f7\">  </span>{usage}%",
-          "tooltip": true,
-      },
-      "memory": {
-          "format": "<span color=\"#cba6f7\">  </span>{used}GiB"
-      },
-      "temperature": {
-          // "thermal-zone": 2,
-          "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-          "critical-threshold": 80,
-          "format": "<span color=\"#89b4fa\"> </span>{temperatureC}°C",
-          "format-critical": "<span color=\"#f38ba8\"> </span>{temperatureC}°C",
-      },
+    "cpu": {
+        "format": "<span color=\"#cba6f7\">  </span>{usage}%",
+        "on-click": "kitty btop"
+    },
+    "memory": {
+        "format": "<span color=\"#cba6f7\"> </span>{used}GiB",
+        "tooltip": false,
+        "on-click": "kitty btop"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format": "<span color=\"#89b4fa\"> </span>{temperatureC}°C",
+        "format-critical": "<span color=\"#f38ba8\"> </span>{temperatureC}°C",
+        "tooltip": false,
+        "on-click": "kitty btop"
+    },
+    "group/pcinfo": {
+      "modules": [
+        "cpu",
+        "memory",
+        "temperature",
+      ],
+      "orientation": "inherit",
+    },
     "power-profiles-daemon": {
       "format": "{icon}",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
@@ -86,8 +98,7 @@
     "network": {
         "format-wifi": "<span color=\"#cba6f7\">    </span>{signalStrength}%",
         "format-ethernet": " <span color=\"#cba6f7\"> </span> ",
-        "tooltip-format": " <span color=\"#cba6f7\"> </span> ",
-        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format-wifi": "{essid}\r{ifname}: {ipaddr}/{cidr}",
         "format-linked": " <span color=\"#cba6f7\"> </span> ",
         "format-disconnected": " <span color=\"#e0af68\"></span> ",
         //"format-alt": " {ifname}: {ipaddr}/{cidr} ",
@@ -117,7 +128,7 @@
       "format": "<span color= \"#cba6f7\">{icon}</span>{volume}%",
       "format-muted": "<span color= \"#cba6f7\"> </span>",
       "on-click": "helvum",
-      "format-icons": ["<span color= \"#cba6f7\">   </span>", "<span color= \"#cba6f7\">   </span>", "<span color= \"#cba6f7\">   </span>"]
+      "format-icons": ["<span color= \"#cba6f7\">  </span>", "<span color= \"#cba6f7\">  </span>", "<span color= \"#cba6f7\">   </span>"]
     },
     "custom/spotify": {
       "format": "{icon} {}",
@@ -167,4 +178,39 @@
       "on-click-right": "swaync-client -d -sw",
       "escape": true
     },
+    "custom/lock":{
+      "format": "<span color=\"#f9e2af\">  </span>",
+      "on-click": "swaylock",
+      "tooltip-format": "Lock",
+    },
+    "custom/reboot":{
+      "format": "<span color=\"#89b4fa\">  </span>",
+      "on-click": "reboot",
+      "tooltip-format": "Restart",
+    },
+    "custom/logout":{
+      "format": "<span color=\"#f5c2e7\">  </span>",
+      "on-click": "exit",
+      "tooltip-format": "Logout",
+    },
+    "custom/power":{
+      "format": "<span color=\"#eba0ac\">  </span>",
+      "on-click": "shutdown now",
+      "tooltip-format": "Shutdown",
+    },
+    "group/group-power":{
+      "modules": [
+        "custom/power",
+        "custom/lock",
+        "custom/reboot",
+        "custom/logout",
+      ],
+      "drawer": {
+        "transition-duration": 500,
+        "children-class": "not-power",
+        "transition-left-to-right": true,
+      },
+      "orientation": "inherit",
+    },
+
 }

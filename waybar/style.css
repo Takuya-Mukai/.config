@@ -2,7 +2,7 @@
 * {
   font-family: Font Awesome;
   font-weight: 500;
-  font-size: 10.0pt;
+  font-size: 11.0pt;
   color: @text;
   
 }
@@ -42,7 +42,7 @@ tooltip {
 
 #workspaces button:hover {
   /*background: #11111b;*/
-  color: #cdd6f4;
+  /*color: #cdd6f4;*/
 }
 
 /* Sets background, padding, margins, and borders for (all) modules */
@@ -54,9 +54,12 @@ tooltip {
   border-radius: 9px;
 }
 #window,
-#temperature,
+#temperature {
+  margin-left: 2px;
+  margin-right: 2px;
+}
 #cpu {
-  margin-left: 4px;
+  margin-left: 2px;
   margin-right: 0px;
   border-radius: 10px 10px 10px 10px;
   /*background: rgba(30, 30, 30, 0.55);*/
@@ -67,10 +70,12 @@ tooltip {
   margin: 0;
   /*background: rgba(30, 30, 30, 0.55);*/
   padding-left: 3px;
-  padding-right: 6px;
+  padding-right: 2px;
   border-radius: 10px;
 }
-#wireplumber,
+#wireplumber {
+  padding-right: 2px;
+}
 #tray{
   padding-right: 3px;
   padding-left: 3px;
@@ -100,7 +105,8 @@ window#waybar.empty #window {
 #network {
   /*background: rgba(26, 27, 38, 0);*/
   border-radius: 10px;
-  margin-right: 4px;
+  margin-right: 2px;
+  margin-left: 2px;
 }
 
 #window {
