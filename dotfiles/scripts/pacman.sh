@@ -28,7 +28,7 @@ yay -S metalua penlight luarocks cmake --noconfirm
 # install japanese input and font
 yay -S fcitx5-im fcitx5-cskk noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd otf-font-awesome  --noconfirm
 # install gui tools
-yay -S vivaldi vivaldi-ffmpeg-codecs chromium webcord btop spotify vlc swayimg obsidian qalculate-gtk thunderbird github-desktop keypassxc selectdefaultapplication-git showmethekey pamac-aur --noconfirm
+yay -S vivaldi vivaldi-ffmpeg-codecs chromium webcord btop spotify vlc swayimg obsidian qalculate-gtk thunderbird keypassxc selectdefaultapplication-git showmethekey pamac-aur --noconfirm
 
 # install theme
 yay -S catppuccin-gtk-theme-mocha catppuccin-cursors-mocha catppuccin-fcitx5-git papirus-folders-catppuccin-git btop-theme-catppuccin --noconfirm

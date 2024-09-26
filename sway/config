@@ -56,7 +56,7 @@ exec clipse -listen
 exec swaync
 exec_always --no-startup-id workstyle &> /tmp/workstyle.log
 exec syncthing
-exec polkit-kde-agent
+exec /usr/lib/polkit-kde-authentication-agent-1
 ### Input configuration
 #
 # Example configuration:
