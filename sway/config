@@ -51,8 +51,6 @@ output * bg ~/.config/sway/backgrounds/Fantasy-Lanscape-Night.png fill
 exec_always fcitx5
 # exec wl-paste --type text --watch clipist store
 # exec wl-paste --type image --watch clipist store
-exec copyq --start-server
-# exec copyq menu
 exec udiskie
 exec clipse -listen
 exec swaync
@@ -101,8 +99,9 @@ exec polkit-kde-agent
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
     bindsym $mod+Shift+n exec swaynv-client -t -sw
+
     # custom settings
-    
+    bindsym $mod+Shift+v exec kitty clipse
 #
 # Moving around:
 #
@@ -249,12 +248,13 @@ client.background        $base
 #
 #opacity
 #
+set $opacity 0.9
 for_window {
-  set $opacity 0.9
   [class=".*"] opacity $opacity
-  [app_id="wl-gammarelay-applet"] floating enable, move position, cursor move up 20
+  [title="Network Connection"] floating enable, move position senter, cursor move up 20
   [app_id="one.alynx.showmethekey" title="Floating Window - Show Me The Key"] floating enable, sticky enable
-  [title="btop$"] floating enable
+  [title="btop$"] floating enable, resize set 80ppt 80ppt
   [title="Pentablet"] floating eneble, sticky enable
+  [title="clipse$"] floating enable, move position senter, resize set 50ppt 80ppt
 }
 include /etc/sway/config.d/*

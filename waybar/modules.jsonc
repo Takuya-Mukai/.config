@@ -128,7 +128,8 @@
       "format": "<span color= \"#cba6f7\">{icon}</span>{volume}%",
       "format-muted": "<span color= \"#cba6f7\"> </span>",
       "on-click": "helvum",
-      "format-icons": ["<span color= \"#cba6f7\">  </span>", "<span color= \"#cba6f7\">  </span>", "<span color= \"#cba6f7\">   </span>"]
+      "format-icons": ["<span color= \"#cba6f7\">  </span>", "<span color= \"#cba6f7\">  </span>", "<span color= \"#cba6f7\">   </span>"],
+      "recerse-scrolling": 1, 
     },
     "custom/spotify": {
       "format": "{icon} {}",

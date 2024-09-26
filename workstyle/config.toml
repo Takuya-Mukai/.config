@@ -64,6 +64,7 @@
 "helvum" = "󱘖"
 "steam" = ""
 "timeshift" = "󱫭"
+"show me the key" = "󰌓"
 [other]
 fallback_icon = ""
 deduplicate_icons = false
