@@ -186,7 +186,7 @@
       "tooltip-format": "Lock",
     },
     "custom/reboot":{
-      "format": "<span color=\"#89b4fa\">  </span>",
+      "format": "<span color=\"#89b4fa\"> 󰜉 </span>",
       "on-click": "reboot",
       "tooltip-format": "Restart",
     },
