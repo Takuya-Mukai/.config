@@ -166,12 +166,12 @@
       "format-icons": {
         "notification": "<span color=\"#f9e2af\"> </span>,<span foreground=\"#f38ba8\"><sup></sup></span>",
         "none": "<span color=\"#f9e2af\"> </span>",
-        "dnd-notification": "<span color=\"#f9e2af\"></span> </span>,<span foreground=\"#f38ba8\"><sup></sup></span>",
-        "dnd-none": "<span color=\"#f9e2af\"> </span>",
+        "dnd-notification": "<span color=\"#89dceb\"></span> </span>,<span foreground=\"#f38ba8\"><sup></sup></span>",
+        "dnd-none": "<span color=\"#89dceb\"> </span>",
         "inhibited-notification": "<span color=\"#f9e2af\"> </span>,<span foreground=\"#f38ba8\"><sup></sup></span>",
         "inhibited-none": "<span color=\"#f9e2af\"> </span>",
-        "dnd-inhibited-notification": "<span color=\"#f9e2af\"> </span>,<span foreground=\"#f38ba8\"><sup></sup></span>",
-        "dnd-inhibited-none": "<span color=\"#f9e2af\"> </span>"
+        "dnd-inhibited-notification": "<span color=\"#89dceb\"> </span>,<span foreground=\"#f38ba8\"><sup></sup></span>",
+        "dnd-inhibited-none": "<span color=\"#89dceb\"> </span>"
       },
       "return-type": "json",
       "exec-if": "which swaync-client",
@@ -186,12 +186,12 @@
       "tooltip-format": "Lock",
     },
     "custom/reboot":{
-      "format": "<span color=\"#89b4fa\"> 󰜉 </span>",
+      "format": "<span color=\"#89b4fa\">  </span>",
       "on-click": "reboot",
       "tooltip-format": "Restart",
     },
     "custom/logout":{
-      "format": "<span color=\"#f5c2e7\"> 󰍃 </span>",
+      "format": "<span color=\"#f5c2e7\">  </span>",
       "on-click": "exit",
       "tooltip-format": "LogOut",
     },
