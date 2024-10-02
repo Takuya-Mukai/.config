@@ -14,7 +14,7 @@ yay -S ufw gufw networkmanager nm-connection-editor bluez bluez-utils blueman op
 # install other desktop tools
 yay -S anyrun-git waybar --noconfirm
 # install audio server
-yay -S pipewire pavucontrol wireplumber helvum --noconfirm
+yay -S pipewire pavucontrol wireplumber helvum sway-audio-idle-inhibit-git --noconfirm
 # install authentication agent
 yay -S polkit-kde-agent --noconfirm
 # install qt wayland support
@@ -54,5 +54,5 @@ yay -S sway swaybg scdoc wl-clipboard clipse swaylock-effects-git swayidle sov w
 yay -S grim slurp swappy --noconfirm
 # for screen share
 yay -S xdg-desktop-portal-wlr xdg-desktop-portal xwaylandvideobridge --noconfirm
-yay -S syncthing syncthing-gtk xppenlinux3 xorg-xwayland xorg-xhost --noconfirm
+yay -S syncthing syncthing-gtk syncthingtray xppenlinux3 xorg-xwayland xorg-xhost --noconfirm
 sudo pacman -S timeshift neofetch tailscale kdeconnect

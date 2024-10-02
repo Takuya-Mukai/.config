@@ -40,10 +40,10 @@ output * bg ~/.config/sway/backgrounds/Fantasy-Lanscape-Night.png fill
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+         timeout 300 'swaylock --clock --indicator --screenshots --effect-blur 7x7 --fade-in 0.3' \
+         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock --clock --indicator --screenshots --effect-blur 7x7 --fade-in 0.3'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -58,6 +58,7 @@ exec_always --no-startup-id workstyle &> /tmp/workstyle.log
 exec syncthing
 exec /usr/lib/polkit-kde-authentication-agent-1
 exec /usr/bin/kdeconnectd
+exec sway-audio-idle-inhibit
 ### Input configuration
 #
 # Example configuration:
@@ -127,7 +128,6 @@ exec /usr/bin/kdeconnectd
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
-#
 # Workspaces:
 #
     # Switch to workspace

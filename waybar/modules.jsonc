@@ -182,7 +182,7 @@
     },
     "custom/lock":{
       "format": "<span color=\"#f9e2af\">  </span>",
-      "on-click": "swaylock",
+      "on-click": "swaylock --clock --indicator --screenshots --effect-blur 7x7 --fade-in 0.3",
       "tooltip-format": "Lock",
     },
     "custom/reboot":{
@@ -193,12 +193,12 @@
     "custom/logout":{
       "format": "<span color=\"#f5c2e7\">  </span>",
       "on-click": "exit",
-      "tooltip-format": "Logout",
+      "tooltip-format": "LogOut",
     },
     "custom/power":{
       "format": "<span color=\"#eba0ac\">  </span>",
       "on-click": "shutdown now",
-      "tooltip-format": "Shutdown",
+      "tooltip-format": "ShutDown",
     },
     "group/group-power":{
       "modules": [
@@ -214,5 +214,4 @@
       },
       "orientation": "inherit",
     },
-
 }
