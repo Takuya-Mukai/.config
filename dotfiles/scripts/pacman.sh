@@ -10,7 +10,7 @@ cd ~
 # install essential packages
 yay -S /mnt base base-devel linux linux-firmware linux-headers openssh --noconfirm
 # install network and security tools
-yay -S ufw gufw networkmanager nm-connection-editor bluez bluez-utils openvpn --noconfirm
+yay -S ufw gufw networkmanager nm-connection-editor bluez bluez-utils blueman openvpn --noconfirm
 # install other desktop tools
 yay -S anyrun-git waybar --noconfirm
 # install audio server
@@ -26,21 +26,33 @@ yay -S fish neovim tmux ripgrep yazi kitty curl texlive npm nodejs lazygit udisk
 # install for neovim
 yay -S metalua penlight luarocks cmake --noconfirm
 # install japanese input and font
-yay -S fcitx5-im fcitx5-cskk noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd otf-font-awesome  --noconfirm
+yay -S fcitx5-im fcitx5-cskk skk-jisyo skk-emoji-jisyo noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd otf-font-awesome  --noconfirm
 # install gui tools
-yay -S vivaldi vivaldi-ffmpeg-codecs chromium webcord btop spotify vlc swayimg obsidian qalculate-gtk thunderbird keypassxc selectdefaultapplication-git showmethekey pamac-aur --noconfirm
+# yay -S vivaldi vivaldi-ffmpeg-codecs
+yay -S chromium webcord-git btop spotify vlc swayimg obsidian qalculate-gtk thunderbird keypassxc selectdefaultapplication-git showmethekey pamac-aur rnote rustdesk --noconfirm
 
 # install theme
 yay -S catppuccin-gtk-theme-mocha catppuccin-cursors-mocha catppuccin-fcitx5-git papirus-folders-catppuccin-git btop-theme-catppuccin --noconfirm
+# install theme thunderbird 
+mkdir ~/gitclone
+cd ~/gitclone
+git clone https://github.com/catppuccin/thunderbird.git
+# install theme for qt5ct
+git clone https://github.com/catppuccin/qt5ct.git
+mkdir -p ~/.config/qt5ct/colors/
+cd ~/gitclone/qt5ct/themes
+cp Catppuccin-Mocha.conf ~/.config/qt5ct/colors/
+
 # install for btop
 yay -S rocm-smi-lib --noconfirm
 # document tool
-yay -S zathura zathura-pdf-mupdf --noconfirm
+yay -S zathura zathura-pdf-mupdf
 # install hyprland
 # yay -S hyprland hyprcursor hyprpaper hyprshot hypridle hyprlock hyprshade thunar clipse --noanswerclean --noanswerdiff
-yay -S sway swaybg scdoc wl-clipboard clipse swaylock-effects-git swayidle wdisplay sov workstyle nwg-displays --noconfirm
+yay -S sway swaybg scdoc wl-clipboard clipse swaylock-effects-git swayidle sov workstyle nwg-displays swaync --noconfirm
 # install tools for screenshot
 yay -S grim slurp swappy --noconfirm
 # for screen share
 yay -S xdg-desktop-portal-wlr xdg-desktop-portal xwaylandvideobridge --noconfirm
 yay -S syncthing syncthing-gtk xppenlinux3 xorg-xwayland xorg-xhost --noconfirm
+sudo pacman -S timeshift neofetch tailscale

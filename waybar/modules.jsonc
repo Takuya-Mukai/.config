@@ -97,9 +97,10 @@
     },
     "network": {
         "format-wifi": "<span color=\"#cba6f7\">    </span>{signalStrength}%",
-        "format-ethernet": " <span color=\"#cba6f7\"> </span> ",
-        "tooltip-format-wifi": "{essid}\r{ifname}: {ipaddr}/{cidr}",
-        "format-linked": " <span color=\"#cba6f7\"> </span> ",
+        "format-ethernet": "<span color=\"#cba6f7\"></span> ",
+        "tooltip-format-wifi": "{essid}\r{ifname}: {ipaddr}/{cidr}\r<span color=\"#89b4fa\"> </span>: {bandwidthDownBits}\r<span color=\"#f38ba8\"> </span>: {bandwidthUpBits}",
+        "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr}\r<span color=\"#89b4fa\"> </span>: {bandwidthDownBits}\r<span color=\"#f38ba8\"> </span>: {bandwidthUpBits}",
+        "format-linked": " <span color=\"#cba6f7\"></span> ",
         "format-disconnected": " <span color=\"#e0af68\"></span> ",
         //"format-alt": " {ifname}: {ipaddr}/{cidr} ",
         "on-click":"nm-connection-editor",
@@ -201,9 +202,9 @@
     },
     "group/group-power":{
       "modules": [
-        "custom/power",
         "custom/lock",
         "custom/reboot",
+        "custom/power",
         "custom/logout",
       ],
       "drawer": {

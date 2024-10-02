@@ -82,3 +82,7 @@ discord/
 syncthing-gtk/
 syncthing/
 rustdesk/
+deluge/
+kdeconnect/
+qBittorrent/
+tool_state

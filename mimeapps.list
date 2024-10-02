@@ -1,4 +1,3 @@
-
 [Default Applications]
 audio/AMR-WB=vlc.desktop
 audio/basic=vlc.desktop
@@ -48,3 +47,10 @@ application/x-fictionbook+xml=org.pwmt.zathura.desktop
 application/oxps=org.pwmt.zathura.desktop
 application/epub+zip=org.pwmt.zathura.desktop
 application/pdf=org.pwmt.zathura.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-X8ORU2.desktop
+message/rfc822=userapp-Thunderbird-X8ORU2.desktop
+x-scheme-handler/mid=userapp-Thunderbird-X8ORU2.desktop
+
+[Added Associations]
+x-scheme-handler/mailto=userapp-Thunderbird-X8ORU2.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-X8ORU2.desktop;
