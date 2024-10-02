@@ -191,7 +191,7 @@
       "tooltip-format": "Restart",
     },
     "custom/logout":{
-      "format": "<span color=\"#f5c2e7\">  </span>",
+      "format": "<span color=\"#f5c2e7\"> 󰍃 </span>",
       "on-click": "exit",
       "tooltip-format": "LogOut",
     },
