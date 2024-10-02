@@ -57,6 +57,7 @@ exec swaync
 exec_always --no-startup-id workstyle &> /tmp/workstyle.log
 exec syncthing
 exec /usr/lib/polkit-kde-authentication-agent-1
+exec /usr/bin/kdeconnectd
 ### Input configuration
 #
 # Example configuration:
