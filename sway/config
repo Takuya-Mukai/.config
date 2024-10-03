@@ -252,10 +252,11 @@ client.background        $base
 set $opacity 0.9
 for_window {
   [class=".*"] opacity $opacity
-  [title="Network Connection"] floating enable, move position senter, cursor move up 20
+  [title="Network Connection"] floating enable, move position center, cursor move up 20
   [app_id="one.alynx.showmethekey" title="Floating Window - Show Me The Key"] floating enable, sticky enable
   [title="btop$"] floating enable, resize set 80ppt 80ppt
-  [title="Pentablet"] floating eneble, sticky enable
-  [title="clipse$"] floating enable, move position senter, resize set 50ppt 80ppt
+  [class="PenTablet"] floating enable
+  [title="clipse$"] floating enable, move position center, resize set 50ppt 80ppt
+  [title="Thunar"] floating enable, resize set 60ppt 70ppt
 }
 include /etc/sway/config.d/*

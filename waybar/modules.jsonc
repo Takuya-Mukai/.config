@@ -60,12 +60,12 @@
     },
     "cpu": {
         "format": "<span color=\"#cba6f7\">  </span>{usage}%",
-        "on-click": "kitty btop"
+        "on-click": "kitty --config background_opacity=0.65 btop"
     },
     "memory": {
         "format": "<span color=\"#cba6f7\"> </span>{used}GiB",
         "tooltip": false,
-        "on-click": "kitty btop"
+        "on-click": "kitty --config background_opacity=0.65 btop"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -74,7 +74,7 @@
         "format": "<span color=\"#89b4fa\"> </span>{temperatureC}°C",
         "format-critical": "<span color=\"#f38ba8\"> </span>{temperatureC}°C",
         "tooltip": false,
-        "on-click": "kitty btop"
+        "on-click": "kitty --config background_opacity=0.65 btop"
     },
     "group/pcinfo": {
       "modules": [
@@ -199,6 +199,11 @@
       "format": "<span color=\"#eba0ac\">  </span>",
       "on-click": "shutdown now",
       "tooltip-format": "ShutDown",
+    },
+    "custom/filemanager":{
+      "format": "<span color=\"#74c7ec\">  </span>",
+      "on-click": "thunar",
+      "tooltip-format": "Filer",
     },
     "group/group-power":{
       "modules": [

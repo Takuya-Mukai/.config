@@ -13,6 +13,7 @@
         "sway/scratchpad",
         "clock#time",
         "clock#date",
+        "custom/filemanager",
     ],
     "modules-center": [
         //"custom/spotify",
