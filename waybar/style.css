@@ -64,7 +64,7 @@ tooltip {
   border-radius: 10px 10px 10px 10px;
   /*background: rgba(30, 30, 30, 0.55);*/
   padding-right: 3px;
-  padding-left: 6px;
+  padding-left: 3px;
 }
 #memory {
   margin: 0;
@@ -74,11 +74,11 @@ tooltip {
   border-radius: 10px;
 }
 #wireplumber {
-  padding-right: 7px;
+  padding-right: 3px;
 }
 #tray{
-  padding-right: 3px;
-  padding-left: 3px;
+  /*padding-right: 3px;*/
+  /*padding-left: 3px;*/
 }
 
 #workspaces {
@@ -106,7 +106,7 @@ window#waybar.empty #window {
   /*background: rgba(26, 27, 38, 0);*/
   border-radius: 10px;
   margin-right: 2px;
-  margin-left: 2px;
+  margin-left: 10px;
 }
 
 #window {

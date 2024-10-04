@@ -35,7 +35,7 @@
     },
     "clock#time": {
         // "timezone": "America/New_York",
-      "format": "<span color=\"#cba6f7\">󰥔  </span>{:%H:%M}",
+      "format": "<span color=\"#f5c2e7\">󰥔  </span>{:%H:%M}",
       "interval": 60,
       "tooltip": false,
     },
@@ -96,11 +96,11 @@
       }
     },
     "network": {
-        "format-wifi": "<span color=\"#cba6f7\">    </span>{signalStrength}%",
-        "format-ethernet": "<span color=\"#cba6f7\"></span> ",
+        "format-wifi": "<span color=\"#94e2d5\">    </span>{signalStrength}%",
+        "format-ethernet": "<span color=\"#94e2d5\"></span> ",
         "tooltip-format-wifi": "{essid}\r{ifname}: {ipaddr}/{cidr}\r<span color=\"#89b4fa\"> </span>: {bandwidthDownBits}\r<span color=\"#f38ba8\"> </span>: {bandwidthUpBits}",
         "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr}\r<span color=\"#89b4fa\"> </span>: {bandwidthDownBits}\r<span color=\"#f38ba8\"> </span>: {bandwidthUpBits}",
-        "format-linked": " <span color=\"#cba6f7\"></span> ",
+        "format-linked": " <span color=\"#94e2d5\"></span> ",
         "format-disconnected": " <span color=\"#e0af68\"></span> ",
         //"format-alt": " {ifname}: {ipaddr}/{cidr} ",
         "on-click":"nm-connection-editor",
@@ -126,10 +126,10 @@
     //    "on-click": "pavucontrol"
     //},
     "wireplumber": {
-      "format": "<span color= \"#cba6f7\">{icon}</span>{volume}%",
-      "format-muted": "<span color= \"#cba6f7\"> </span>",
-      "on-click": "helvum",
-      "format-icons": ["<span color= \"#cba6f7\">  </span>", "<span color= \"#cba6f7\">  </span>", "<span color= \"#cba6f7\">   </span>"],
+      "format": "<span color= \"#fab387\">{icon}</span>{volume}%",
+      "format-muted": "<span color= \"#9399b2\"> </span>",
+      "on-click": "pavucontrol",
+      "format-icons": ["<span color= \"#eba0ac\">  </span>", "<span color= \"#eba0ac\">  </span>", "<span color= \"#eba0ac\">   </span>"],
       "recerse-scrolling": 1, 
     },
     "custom/spotify": {
@@ -147,10 +147,6 @@
       "exec-if": "pgrep spotify"
     },
 
-    "custom/power": {
-      "format": "<span color=\"#cba6f7\">  </span>",
-      "on-click": "rofi -show power-menu -modi power-menu:rofi-power-menu"
-    },
     "tray": {
       "icon-size": 14,
       "spacing": 4,
@@ -200,6 +196,11 @@
       "on-click": "shutdown now",
       "tooltip-format": "ShutDown",
     },
+    "custom/sleep":{
+      "format": "<span color=\"#cba6f7\"> ⏾</span>",
+      "on-click": "swaylock --clock --indicator --screenshots --effect-blur 7x7 --fade-in 0.3",
+      "tooltip-format": "Sleep",
+    },
     "custom/filemanager":{
       "format": "<span color=\"#74c7ec\">  </span>",
       "on-click": "thunar",
@@ -209,6 +210,7 @@
       "modules": [
         "custom/lock",
         "custom/reboot",
+        "custom/sleep",
         "custom/power",
         "custom/logout",
       ],
