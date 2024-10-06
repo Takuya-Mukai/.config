@@ -59,6 +59,8 @@ exec syncthing
 exec /usr/lib/polkit-kde-authentication-agent-1
 exec /usr/bin/kdeconnectd
 exec sway-audio-idle-inhibit
+exec ./scripts/optimize4ExitNode.sh
+exec nm-applet --sm-disable &
 ### Input configuration
 #
 # Example configuration:

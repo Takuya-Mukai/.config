@@ -10,7 +10,7 @@ cd ~
 # install essential packages
 yay -S /mnt base base-devel linux linux-firmware linux-headers openssh --noconfirm
 # install network and security tools
-yay -S ufw gufw networkmanager nm-connection-editor bluez bluez-utils blueman wireguard usbutils --noconfirm
+yay -S ufw gufw networkmanager nm-connection-editor network-manager-applet bluez bluez-utils blueman wireguard usbutils --noconfirm
 # install other desktop tools
 yay -S anyrun-git waybar --noconfirm
 # install audio server

@@ -1,3 +1,7 @@
+[Added Associations]
+x-scheme-handler/mailto=userapp-Thunderbird-X8ORU2.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-X8ORU2.desktop;
+
 [Default Applications]
 audio/AMR-WB=vlc.desktop
 audio/basic=vlc.desktop
@@ -28,29 +32,28 @@ audio/x-ms-asx=vlc.desktop
 audio/x-tta=vlc.desktop
 audio/AMR=vlc.desktop
 audio/x-s3m=vlc.desktop
-inode/directory=thunar.desktop
 application/xml=chromium.desktop
-image/x-portable-anymap=swayimg.desktop
-image/gif=swayimg.desktop
-image/webp=swayimg.desktop
-image/bmp=swayimg.desktop
-image/x-tga=swayimg.desktop
-image/svg+xml=swayimg.desktop
-image/x-exr=swayimg.desktop
-image/jpeg=swayimg.desktop
-image/heif=swayimg.desktop
-image/avif=swayimg.desktop
-image/png=swayimg.desktop
-image/tiff=swayimg.desktop
 text/html=chromium.desktop
 application/x-fictionbook+xml=org.pwmt.zathura.desktop
 application/oxps=org.pwmt.zathura.desktop
 application/epub+zip=org.pwmt.zathura.desktop
 application/pdf=org.pwmt.zathura.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-X8ORU2.desktop
-message/rfc822=userapp-Thunderbird-X8ORU2.desktop
 x-scheme-handler/mid=userapp-Thunderbird-X8ORU2.desktop
-
-[Added Associations]
-x-scheme-handler/mailto=userapp-Thunderbird-X8ORU2.desktop;
-x-scheme-handler/mid=userapp-Thunderbird-X8ORU2.desktop;
+message/rfc822=org.mozilla.Thunderbird.desktop
+inode/directory=yazi.desktop
+image/gif=swayimg.desktop
+image/x-portable-anymap=swayimg.desktop
+image/x-exr=swayimg.desktop
+image/svg+xml=swayimg.desktop
+image/jpeg=swayimg.desktop
+image/x-portable-pixmap=swayimg.desktop
+image/avif=swayimg.desktop
+image/x-portable-graymap=swayimg.desktop
+image/x-tga=swayimg.desktop
+image/x-portable-bitmap=swayimg.desktop
+image/bmp=swayimg.desktop
+image/png=swayimg.desktop
+image/webp=swayimg.desktop
+image/tiff=swayimg.desktop
+image/heif=swayimg.desktop

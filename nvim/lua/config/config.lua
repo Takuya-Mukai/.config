@@ -22,6 +22,7 @@ vim.o.helplang = "ja,en"
 vim.api.nvim_set_option_value("signcolumn", "yes:1", {})
 vim.api.nvim_set_option_value("clipboard", "unnamedplus", {})
 vim.api.nvim_set_option_value("wrap", false, {})
+vim.g.maplocalleader = ' '
 -- vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
 --   pattern = '*',
 --   callback = function()
@@ -45,4 +46,3 @@ vim.cmd("autocmd TermOpen * setlocal nonumber")
 vim.cmd("autocmd TermOpen * setlocal norelativenumber")
 -- Vimscript コマンドを Lua から実行
 vim.cmd('let g:denops#deno = "/usr/bin/deno"')
-vim.g.python3_host_prog=vim.fn.expand("~/venv/main/bin/python3")
