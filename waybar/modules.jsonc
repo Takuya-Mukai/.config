@@ -188,7 +188,7 @@
     },
     "custom/logout":{
       "format": "<span color=\"#f5c2e7\">  </span>",
-      "on-click": "exit",
+      "on-click": "swaymsg exit",
       "tooltip-format": "LogOut",
     },
     "custom/power":{

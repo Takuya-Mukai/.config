@@ -61,7 +61,7 @@ exec /usr/bin/kdeconnectd
 exec sway-audio-idle-inhibit
 exec ./scripts/optimize4ExitNode.sh
 exec nm-applet --sm-disable &
-exec ./scripts/wayvnc_server.sh &
+exec ./scripts/wayvnc_server.sh
 ### Input configuration
 #
 # Example configuration:
