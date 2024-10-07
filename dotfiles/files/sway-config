@@ -1,0 +1,12 @@
+# `-l` は layer-shell モードを有効化します。
+# `swaymsg exit` が gtkgreet の後に実行されることに注意してください。
+exec "wlgreet --command sway; swaymsg exit"
+
+bindsym Mod4+shift+e exec swaynag \
+-t warning \
+-m 'What do you want to do?' \
+-b 'Poweroff' 'systemctl poweroff' \
+-b 'Reboot' 'systemctl reboot'
+-b 'tty' 'exit sway'
+
+include /etc/sway/config.d/*
