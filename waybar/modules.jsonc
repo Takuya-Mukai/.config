@@ -206,6 +206,11 @@
       "on-click": "thunar",
       "tooltip-format": "Filer",
     },
+    "custom/drawer":{
+      "format": "<span color=\"#74c7ec\">  </span>",
+      "on-click": "nwg-drawer",
+      "tooltip-format": "drawer",
+    },
     "group/group-power":{
       "modules": [
         "custom/lock",
