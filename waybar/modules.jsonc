@@ -35,7 +35,7 @@
     },
     "clock#time": {
         // "timezone": "America/New_York",
-      "format": "<span color=\"#f5c2e7\">󰥔  </span>{:%H:%M}",
+      "format": "<span color=\"#eba0ac\">  </span>{:%h:%m}",
       "interval": 60,
       "tooltip": false,
     },
