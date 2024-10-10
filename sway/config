@@ -62,7 +62,6 @@ exec sway-audio-idle-inhibit
 exec ./scripts/optimize4ExitNode.sh
 exec nm-applet --sm-disable &
 exec ./scripts/wayvnc_server.sh
-exec ./scripts/caps2esc.sh
 ### Input configuration
 #
 # Example configuration:
@@ -73,6 +72,10 @@ exec ./scripts/caps2esc.sh
 #       natural_scroll enabled
 #       middle_emulation enabled
 #   }
+input * {
+    xkb_options ctrl_modifier
+}
+
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
