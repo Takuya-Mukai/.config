@@ -19,7 +19,7 @@ require('mason-tool-installer').setup {
     'blue',
 
     'clangd',
-    'codellbd',
+    'codelldb',
     'cpplint',
     'clang-format',
     
