@@ -72,8 +72,8 @@ exec ./scripts/wayvnc_server.sh
 #       natural_scroll enabled
 #       middle_emulation enabled
 #   }
-input <identifier> {
-    xkb_options caps:ctrl_modifier
+input "type:keyboard" {
+    xkb_options caps:nopcaps
 }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs

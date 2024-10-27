@@ -42,6 +42,10 @@ git clone https://github.com/catppuccin/qt5ct.git
 mkdir -p ~/.config/qt5ct/colors/
 cd ~/gitclone/qt5ct/themes
 cp Catppuccin-Mocha.conf ~/.config/qt5ct/colors/
+# tmux config
+mkdir -p ~/.config/tmux/plugins/catppuccin
+git clone -b v2.1.0 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
+
 
 # install for btop
 yay -S rocm-smi-lib --noconfirm

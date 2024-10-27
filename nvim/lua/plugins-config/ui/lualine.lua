@@ -3,8 +3,8 @@ require('lualine').setup{
 	  globalstatus = true,
     theme = "catppuccin",
       -- ... the rest of your lualine config 	
-    component_separators = {left = '', right = ''},
-    section_separators = {left = '', right = ''},
+    component_separators = {left = '', right = ''},
+    section_separators = {left = '', right = ''},
     colored = false,
   },
   sections = {
@@ -19,8 +19,8 @@ require('lualine').setup{
       },
       'navic'
     },
-    lualine_x = {'filetype'},
-    lualine_y = {},
+    lualine_x = {{'encoding', show_bomb = false}},
+    lualine_y = {'filetype'},
   },
   tabline = {
     lualine_a = {'buffers'},
