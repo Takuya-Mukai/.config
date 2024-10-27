@@ -1,6 +1,7 @@
 [Added Associations]
 x-scheme-handler/mailto=userapp-Thunderbird-X8ORU2.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-X8ORU2.desktop;
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
 
 [Default Applications]
 audio/AMR-WB=vlc.desktop
@@ -32,12 +33,7 @@ audio/x-ms-asx=vlc.desktop
 audio/x-tta=vlc.desktop
 audio/AMR=vlc.desktop
 audio/x-s3m=vlc.desktop
-application/xml=chromium.desktop
 text/html=chromium.desktop
-application/x-fictionbook+xml=org.pwmt.zathura.desktop
-application/oxps=org.pwmt.zathura.desktop
-application/epub+zip=org.pwmt.zathura.desktop
-application/pdf=org.pwmt.zathura.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-X8ORU2.desktop
 x-scheme-handler/mid=userapp-Thunderbird-X8ORU2.desktop
 image/gif=swayimg.desktop
@@ -57,3 +53,8 @@ image/tiff=swayimg.desktop
 image/heif=swayimg.desktop
 inode/directory=thunar.desktop
 message/rfc822=org.mozilla.Thunderbird.desktop
+x-content/audio-player=org.strawberrymusicplayer.strawberry.desktop
+application/epub+zip=org.pwmt.zathura.desktop
+application/oxps=org.pwmt.zathura.desktop
+application/x-xpinstall=firefox.desktop
+application/xml=firefox.desktop
