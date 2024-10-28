@@ -1,0 +1,9 @@
+[ElisaFileIndexer]
+RootPath[$e]=$HOME
+
+[UiSettings]
+ColorScheme=Breeze Dark
+
+[Views]
+ColorScheme=Breeze Dark
+InitialFilesViewPath=/home/muta/.votify/Spotify
