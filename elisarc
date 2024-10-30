@@ -7,3 +7,4 @@ ColorScheme=Breeze Dark
 [Views]
 ColorScheme=Breeze Dark
 InitialFilesViewPath=/home/muta/.votify/Spotify
+ViewStylePreferences=Artist==GridStyle
