@@ -12,6 +12,7 @@
 # about contents
 "rnote" = ""
 "lazygit" = "󰒲"
+"android-file-transfer" = "󰓷"
 "github" = ""
 "arch" = "󰣇"
 "rust" = ""
@@ -66,7 +67,6 @@
 "steam" = ""
 "timeshift" = "󱫭"
 "show me the key" = "󰌓"
-"elisa" = ""
 [other]
 fallback_icon = ""
 deduplicate_icons = false
