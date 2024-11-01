@@ -292,17 +292,16 @@ client.background        $base
 #opacity
 #
 set $opacity 0.9
-for_window {
-  [class=".*"] opacity $opacity
-  [title="Network Connection"] floating enable, move position center, cursor move up 20
-  [app_id="one.alynx.showmethekey" title="Floating Window - Show Me The Key"] floating enable, sticky enable
-  [title="btop$"] floating enable, move position center, resize set 80ppt 80ppt
-  [class="PenTablet"] floating enable
-  [title="clipse$"] floating enable, move position center, resize set 50ppt 80ppt
-  [title="Thunar"] floating enable, resize set 60ppt 70ppt
-  [app_id = "blueman-manager"] floating enable
-  [app_id = "org.pulseaudio.pavucontrol"] floating enable, move position 70ppt 0ppt
-}
+for_window [class=".*"] opacity $opacity
+for_window [title="Network Connection"] floating enable, move position center, cursor move up 20
+for_window [app_id="one.alynx.showmethekey" title="Floating Window - Show Me The Key"] floating enable, sticky enable
+for_window [title="btop$"] floating enable, move position center, resize set 80ppt 80ppt
+for_window [class="PenTablet"] floating enable
+for_window [title="clipse$"] floating enable, move position center, resize set 50ppt 80ppt
+for_window [title="Thunar"] floating enable, resize set 60ppt 70ppt
+for_window [app_id = "blueman-manager"] floating enable
+for_window [app_id = "org.pulseaudio.pavucontrol"] floating enable, move position 70ppt 0ppt
+
 for_window [window_role = "pop-up"] floating enable
 for_window [window_role = "bubble"] floating enable
 for_window [window_role = "dialog"] floating enable
