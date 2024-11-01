@@ -67,6 +67,8 @@
 "steam" = ""
 "timeshift" = "󱫭"
 "show me the key" = "󰌓"
+"elisa" = ""
+"zathura" = "󰈙"
 [other]
 fallback_icon = ""
 deduplicate_icons = false
