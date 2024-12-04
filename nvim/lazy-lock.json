@@ -49,7 +49,7 @@
   "openscad.nvim": { "branch": "main", "commit": "bf99a48bff318ceb28646d27f29f925ba0b10af0" },
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
   "promise-async": { "branch": "main", "commit": "119e8961014c9bfaf1487bf3c2a393d254f337e2" },
-  "render-markdown": { "branch": "main", "commit": "d69a885e1bf21cb329d2eafe56fd80b6de627216" },
+  "render-markdown": { "branch": "main", "commit": "78a2eb7fc273f36790aa390262f390a3265eedff" },
   "smart-open.nvim": { "branch": "0.2.x", "commit": "7770b01ce4d551c143d7ec8589879320796621b9" },
   "sqlite.lua": { "branch": "master", "commit": "d0ffd703b56d090d213b497ed4eb840495f14a11" },
   "sved": { "branch": "master", "commit": "3edf1030c28e3a5e3b01aea7f94fa04ac4f0e48a" },
