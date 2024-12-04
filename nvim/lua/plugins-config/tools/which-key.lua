@@ -11,6 +11,7 @@ wk.add({
     {"<leader>fd", function() tel_b.diagnostics(themes.get_ivy()) end, desc = "Diagnostics"},
     {"<leader>fr", function() tel_b.lsp_references(themes.get_ivy()) end, desc = "LSP References"},
     {"<leader>fs", function() tel_b.lsp_document_symbols(themes.get_ivy()) end, desc = "LSP Document Symbols"},
+    {"<leader>fc", "<cmd>Telescope commands<cr>", desc = "All Commands"},
     {"<leader>fk", "<cmd>Telescope keymaps<cr>", desc = "Keymaps"},
     {"<leader>fi", "<cmd>Telescope builtin<cr>", desc = "Builtins"},
 
