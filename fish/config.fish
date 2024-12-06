@@ -10,4 +10,5 @@ function y
 	end
 	rm -f -- "$tmp"
 end
+zoxide init fish | source
 fish_vi_key_bindings
