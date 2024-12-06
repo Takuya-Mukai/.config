@@ -22,7 +22,7 @@ yay -S qt5-wayland qt6-wayland --noconfirm
 # install theme settings
 yay -S nwg-look qt6ct qt5ct --noconfirm
 # install cli tools
-yay -S fish neovim tmux ripgrep yazi kitty curl texlive npm nodejs lazygit udiskie --noconfirm
+yay -S fish neovim tmux ripgrep yazi kitty curl texlive npm nodejs lazygit udiskie zoxide fzf --noconfirm
 # install for neovim
 yay -S metalua penlight luarocks cmake --noconfirm
 # install japanese input and font

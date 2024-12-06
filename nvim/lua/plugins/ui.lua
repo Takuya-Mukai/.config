@@ -15,7 +15,7 @@ return{
   },
   {
     'lewis6991/gitsigns.nvim',
-    tag = 'v0.7.0',
+    -- tag = 'v0.7.0',
     config = function ()
       require 'plugins-config.ui.gitsigns'
     end,
