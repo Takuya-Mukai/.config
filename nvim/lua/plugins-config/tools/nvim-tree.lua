@@ -12,7 +12,11 @@ local function my_on_attach(bufnr) local api = require "nvim-tree.api"
 end
 
 vim.api.nvim_create_user_command('Ex', function() vim.cmd.NvimTreeToggle() end, {})
-  vim.keymap.set('n', '<leader>ex', vim.cmd.NvimTreeToggle)
+vim.keymap.set('n', '<leader>ex', vim.cmd.NvimTreeToggle)
+local wk = require("which-key")
+wk.add({
+  {"<leader>ex", vim.cmd.NvimTreeToggle, desc = "Open nvim-tree"},
+})
 -- pass to setup along with your other options
 require("nvim-tree").setup {
   on_attach = require('plugins-config.tools.nvim-tree-actions').on_attach,

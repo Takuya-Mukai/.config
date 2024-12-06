@@ -38,11 +38,8 @@ vim.api.nvim_set_var("loaded_netrwPlugin", 1)
 -- キーマッピング
 vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "jk", "<C-\\><C-N>", { noremap = true, silent = true })
-
-vim.api.nvim_set_keymap("n", "<leader>vim", ":e ~/.config/nvim/init.lua<CR>", { noremap = true, silent = true })
 -- コマンドモードで "Vim" と入力すると、init.lua を開く
 -- Don't auto-insert line break when selecting completion
 vim.cmd("autocmd TermOpen * setlocal nonumber")
 vim.cmd("autocmd TermOpen * setlocal norelativenumber")
 -- Vimscript コマンドを Lua から実行
-vim.cmd('let g:denops#deno = "/usr/bin/deno"')

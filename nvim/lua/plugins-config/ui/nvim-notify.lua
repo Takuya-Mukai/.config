@@ -7,7 +7,7 @@ vim.notify = notify
 local telescope = require'telescope'
 telescope.load_extension('notify')
 
-vim.keymap.set('n', '<leader>fn', function()
-  telescope.extensions.notify.notify()
-end)
-
+local wk = require("which-key")
+wk.add({
+  {"<leader>fn", function() telescope.extensions.notify.notify() end, desc = "Notify", icon = "󰟶 "}
+})
