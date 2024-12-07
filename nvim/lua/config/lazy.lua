@@ -9,5 +9,8 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 require("lazy").setup({
   spec = {
     { import = "plugins" },
-  }
+  },
+  ui = {
+    border="single",
+  },
 })

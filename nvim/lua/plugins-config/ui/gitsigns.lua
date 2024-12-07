@@ -82,9 +82,9 @@ wk.add({
   {"<leader>hd", function() gs.diffthis() end, desc = "Diff", icon = "󰕚"},
   {"<leader>hd", function() gs.diffthis('~') end, desc = "Diff ~", icon = "󰕚"},
 
-  {"<leader>t", group = "Git toggle", icon = {"󰊢", color = "orange"}},
-  {"<leader>tb", gitsigns.toggle_current_line_blame, desc = "toggle current line blame"},
-  {"<leader>td", gitsigns.toggle_deleted, desc = "toggle deleted line"},
+  {"<leader>t", group = "Toggle"},
+  {"<leader>tb", gitsigns.toggle_current_line_blame, desc = "Git toggle current line blame", icon = {"󰊢", color = "orange"}},
+  {"<leader>td", gitsigns.toggle_deleted, desc = "Gittoggle deleted line", icon = {"󰊢", color = "orange"}},
 
   {'ih', ':<C-U>Gitsigns select_hunk<CR>', mode = {'o', 'x'}, desc = "hunk selected"},
 

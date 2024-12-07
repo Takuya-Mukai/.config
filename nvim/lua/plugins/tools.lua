@@ -2,7 +2,6 @@ return{
   {
     'folke/which-key.nvim',
     -- tag = 'v1.4.0',
-    config = function() require 'plugins-config.tools.which-key' end,
     opts = {},
     lazy = true,
     keys = {
@@ -57,7 +56,6 @@ return{
     dependencies = { 'nvim-tree/nvim-web-devicons', 'nvim-telescope/telescope.nvim' },
     keys = { { '<leader>ex', mode = 'n' } },
   },
-  ---@type LazySpec
   {
     "mikavilpas/yazi.nvim",
     event = "VeryLazy",
@@ -82,7 +80,6 @@ return{
         desc = "Resume the last yazi session",
       },
     },
-    ---@type YaziConfig
     opts = {
       -- if you want to open yazi instead of netrw, see below for more info
       open_for_directories = false,

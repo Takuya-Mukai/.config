@@ -46,7 +46,7 @@ vim.cmd("autocmd TermOpen * setlocal norelativenumber")
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "julia",
     callback = function()
-        vim.api.nvim_buf_set_keymap(0, "i", "\\div<Tab>", "÷", { noremap = true, silent = true })
+        vim.api.nvim_buf_set_keymap(0, "i", "//", "÷", { noremap = true, silent = true })
     end,
 })
 

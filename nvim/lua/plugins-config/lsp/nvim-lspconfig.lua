@@ -19,23 +19,24 @@ vim.api.nvim_create_autocmd('LspAttach', {
     local wk = require("which-key")
     wk.add({
       {'g', group="LSP info"},
-      {'gD', vim.lsp.buf.declaration, desc="LSP declaration", opts},
-      {'gd', vim.lsp.buf.definition, desc="LSP definition", opts},
-      {'K', vim.lsp.buf.hover, desc="buffer hover", opts},
-      {'gi', vim.lsp.buf.implementation, opts},
+      {'gD', vim.lsp.buf.declaration, desc="Declaration", opts},
+      {'gd', vim.lsp.buf.definition, desc="Definition", opts},
+      {'gi', vim.lsp.buf.implementation, desc="Implementation", opts},
+      {'gr', vim.lsp.buf.references, desc="References", opts},
+      {'K', vim.lsp.buf.hover, desc="Buffer hover", opts},
       {'<C-k>', vim.lsp.buf.signature_help, opts},
-      {'<space>wa', vim.lsp.buf.add_workspace_folder, opts},
-      {'<space>wr', vim.lsp.buf.remove_workspace_folder, opts},
+      {'<space>', group="LSP tools"},
+      {'<space>wa', vim.lsp.buf.add_workspace_folder, desc="Add workspace folder", opts},
+      {'<space>wr', vim.lsp.buf.remove_workspace_folder, desc="Remove workspace folder", opts},
       {'<space>wl', function()
         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-      end, opts},
-      {'<space>D', vim.lsp.buf.type_definition, opts},
-      {'<space>rn', vim.lsp.buf.rename, opts},
-      {'<space>ca', vim.lsp.buf.code_action, opts},
-      {'gr', vim.lsp.buf.references, opts},
+      end, desc="List workspace folder", opts},
+      {'<space>D', vim.lsp.buf.type_definition, desc="Type-definition",opts},
+      {'<space>rn', vim.lsp.buf.rename, desc="Rename", opts},
+      {'<space>ca', vim.lsp.buf.code_action, desc="Code action", opts},
       {'<space>f', function()
         vim.lsp.buf.format { async = true }
-      end, opts},
+      end, desc="Format", opts},
     })
   end,
 })

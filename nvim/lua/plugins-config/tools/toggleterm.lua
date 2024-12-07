@@ -1,5 +1,12 @@
 require("toggleterm").setup({
   open_mapping = [[<leader>tt]],
+  shade_terminals = true,
+  shading_factor = 1,
+  direction = "float",
+  size = vim.o.columns * 0.4,
+  float_opts = {
+    border = "single",
+  },
 })
 
 local Terminal  = require('toggleterm.terminal').Terminal
@@ -27,6 +34,5 @@ end
 
 local wk = require("which-key")
 wk.add({
-  {"<leader>g", "<cmd>lua _lazygit_toggle()<CR>", noremap = true, silent = true, desc = "lazygit"},
-
+  {"<leader>tg", "<cmd>lua _lazygit_toggle()<CR>", noremap = true, silent = true, desc = "lazygit"},
 })

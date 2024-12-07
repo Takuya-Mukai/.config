@@ -2,7 +2,7 @@ return {
   {
     'folke/trouble.nvim',
     lazy = true,
-    keys = {"<leader>x", mode = "n", desc = "show error"},
+    cmd = "Trouble",
     config = function() require 'plugins-config.lsp.trouble' end,
     dependencies = 'nvim-tree/nvim-web-devicons',
   },

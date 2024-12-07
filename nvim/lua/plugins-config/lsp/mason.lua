@@ -52,3 +52,24 @@ require('mason-lspconfig').setup_handlers {
     }
   end,
 }
+
+-- command to start lua_ls if not started
+vim.api.nvim_create_autocmd('BufEnter', {
+  pattern = "*.lua",
+  callback = function()
+    local lua_ls_active = false
+    local buf_clients = vim.lsp.get_clients({ bufnr = vim.api.nvim_get_current_buf() })
+
+    for _, client in pairs(buf_clients) do
+      if client.name == "lua_ls" then
+        lua_ls_active = true
+        break
+      end
+    end
+
+    if not lua_ls_active then
+      vim.cmd("LspStart lua_ls")
+    end
+  end,
+})
+

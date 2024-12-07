@@ -34,7 +34,7 @@ require("catppuccin").setup({
   integrations = {
     telescope = {
     enabled = true,
-    style = "nvchad"
+    style = "nvchad",
     },
     cmp = true,
     gitsigns = true,
@@ -60,8 +60,3 @@ require("catppuccin").setup({
 
 -- setup must be called before loading
 vim.cmd.colorscheme "catppuccin"
-
-local latte = require("catppuccin.palettes").get_palette "latte"
-local frappe = require("catppuccin.palettes").get_palette "frappe"
-local macchiato = require("catppuccin.palettes").get_palette "macchiato"
-local mocha = require("catppuccin.palettes").get_palette "mocha"
