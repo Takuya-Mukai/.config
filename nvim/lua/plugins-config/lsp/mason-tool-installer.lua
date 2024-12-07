@@ -23,6 +23,8 @@ require('mason-tool-installer').setup {
     'cpplint',
     'clang-format',
     
+    'julia-lsp',
+
     'bash-language-server',
     'bash-debug-adapter',
     'shellcheck',

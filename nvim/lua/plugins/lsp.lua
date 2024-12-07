@@ -2,21 +2,20 @@ return {
   {
     'folke/trouble.nvim',
     lazy = true,
-    keys = {"<leader>x", mode = "n"},
+    keys = {"<leader>x", mode = "n", desc = "show error"},
     config = function() require 'plugins-config.lsp.trouble' end,
     dependencies = 'nvim-tree/nvim-web-devicons',
   },
   {
     'williamboman/mason.nvim',
     dependencies = {
-      -- 'hrsh7th/cmp-nvim-lsp',
-      -- 'williamboman/mason-lspconfig.nvim',
-      -- {
-      --   'neovim/nvim-lspconfig',
-      --   config = function()
-      --     require 'plugins-config.lsp.nvim-lspconfig'
-      --   end
-      -- },
+      'hrsh7th/cmp-nvim-lsp',
+      'williamboman/mason-lspconfig.nvim',
+      {
+        'neovim/nvim-lspconfig',
+        config = function() require 'plugins-config.lsp.nvim-lspconfig' end,
+        verylazy=true,
+      },
     },
     lazy = true,
     -- cmd = {
@@ -28,22 +27,6 @@ return {
     --   "MasonUpdate",
     -- },
     config = function() require 'plugins-config.lsp.mason' end,
-  },
-  {
-    'neovim/nvim-lspconfig',
-    config = function() require 'plugins-config.lsp.nvim-lspconfig' end,
-    dependencies = {
-      -- 'williamboman/mason.nvim',
-      'williamoman/mason-lspconfig.nvim',
-    },
-    lazy = true,
-  },
-  {
-    'williamboman/mason-lspconfig.nvim',
-    dependencies = {
-      'williamboman/mason.nvim',
-      -- 'neovim/nvim-lspconfig',
-    },
   },
   {
     'nvimtools/none-ls.nvim',

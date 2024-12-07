@@ -6,6 +6,5 @@ return {
     config = function()
       require('plugins-config.tools.vimtex')
     end,
-    dependencies = "peterbjorgensen/sved",
   }
 }

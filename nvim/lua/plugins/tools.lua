@@ -5,6 +5,15 @@ return{
     config = function() require 'plugins-config.tools.which-key' end,
     opts = {},
     lazy = true,
+    keys = {
+      {
+        "<leader>?",
+        function()
+          require("which-key").show({ global = false })
+        end,
+        desc = "Buffer Local Keymaps (which-key)",
+      },
+    },
   },
   {
     'nvim-telescope/telescope.nvim',
