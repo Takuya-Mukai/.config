@@ -37,6 +37,12 @@ cmp.setup {
     { name = 'buffer' },
     { name = 'vimtex' },
     { name = 'path' },
+    {
+      name = 'latex_symbols',
+      option = {
+        strategy = 0,
+      }
+    }
   },
 
   snippet = {

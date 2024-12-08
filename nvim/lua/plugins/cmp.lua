@@ -25,6 +25,7 @@ return{
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-cmdline',
         'onsails/lspkind.nvim',
+        "kdheepak/cmp-latex-symbols",
       },
     }
   },
