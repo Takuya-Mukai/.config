@@ -52,8 +52,8 @@ workspace 10 output HDMI-A-1
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 300 'swaylock --clock --indicator --screenshots --effect-blur 7x7 --fade-in 0.3' \
-         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         timeout 600 'swaylock --clock --indicator --screenshots --effect-blur 7x7 --fade-in 0.3' \
+         timeout 1200 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
          before-sleep 'swaylock --clock --indicator --screenshots --effect-blur 7x7 --fade-in 0.3'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
