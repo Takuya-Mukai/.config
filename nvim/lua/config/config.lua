@@ -43,10 +43,3 @@ vim.api.nvim_set_keymap("t", "jk", "<C-\\><C-N>", { noremap = true, silent = tru
 vim.cmd("autocmd TermOpen * setlocal nonumber")
 vim.cmd("autocmd TermOpen * setlocal norelativenumber")
 -- Vimscript コマンドを Lua から実行
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = "julia",
-    callback = function()
-        vim.api.nvim_buf_set_keymap(0, "i", "//", "÷", { noremap = true, silent = true })
-    end,
-})
-
