@@ -97,9 +97,11 @@ exec rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov -t 
 #
     # Start a terminal
     bindsym $mod+Return exec $term
-
     # Start web browser
     bindsym $mod+q exec $browser
+    # Start web browser
+    bindsym $mod+o exec ~/.appimage/Obsidian-1.7.5.AppImage
+
     # Kill focused window
     bindsym $mod+c kill
 
@@ -289,10 +291,7 @@ client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
 #
-#opacity
-#
-set $opacity 0.9
-for_window [class=".*"] opacity $opacity
+for_window [app_id="kitty"] opacity 0.95
 for_window [title="Network Connection"] floating enable, move position center, cursor move up 20
 for_window [app_id="one.alynx.showmethekey" title="Floating Window - Show Me The Key"] floating enable, sticky enable
 for_window [title="btop$"] floating enable, move position center, resize set 80ppt 80ppt

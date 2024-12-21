@@ -1,4 +1,5 @@
 require('mini.pairs').setup()
+require('mini.surround').setup()
 
 local hipatterns = require('mini.hipatterns')
 hipatterns.setup({
@@ -13,4 +14,3 @@ hipatterns.setup({
     hex_color = hipatterns.gen_highlighter.hex_color(),
   },
 })
-require('mini.surround').setup()
