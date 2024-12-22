@@ -32,8 +32,12 @@ output * bg ~/.config/sway/backgrounds/Fantasy-Lanscape-Night.png fill
 #
 # Example configuration:
 #
+# archdesk
 output DP-1 resolution 1920x1080 position 0,0
 output HDMI-A-1 resolution 1920x1080 position 1920,0
+# archmini
+output DP-2 resolution 1920x1080 position 0,720
+output HDMI-A-2 resolution 1920x1080 position 320,0 scale 1.5
 workspace 1 output DP-1
 workspace 2 output DP-1
 workspace 3 output DP-1
