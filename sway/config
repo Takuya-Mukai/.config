@@ -17,7 +17,7 @@ set $right l
 # Your preferred terminal emulator
 set $term kitty
 # set $browser vivaldi --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime %U
-set $browser firefox
+set $browser zen-browser
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
