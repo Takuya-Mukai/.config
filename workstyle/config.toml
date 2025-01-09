@@ -71,6 +71,8 @@
 "show me the key" = "󰌓"
 "elisa" = ""
 "zathura" = "󰈙"
+"calibre" = ""
+"kdeconnect" = " "
 [other]
 fallback_icon = ""
 deduplicate_icons = false
