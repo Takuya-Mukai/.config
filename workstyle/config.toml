@@ -73,6 +73,7 @@
 "zathura" = "󰈙"
 "calibre" = ""
 "kdeconnect" = " "
+"zoom" = ""
 [other]
 fallback_icon = ""
 deduplicate_icons = false

@@ -78,8 +78,7 @@ exec ./scripts/optimize4ExitNode.sh
 exec nm-applet --sm-disable &
 exec ./scripts/wayvnc_server.sh
 exec rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov -t 500
-# Obsidian を自動起動し、sticky mode に設定
-exec --no-startup-id obsidian
+exec --no-startup-id $HOME/.appimage/Obsidian.AppImage
 ### Input configuration
 #
 # Example configuration:
@@ -106,7 +105,7 @@ exec --no-startup-id obsidian
     # Start web browser
     bindsym $mod+q exec $browser
     # Start web browser
-    bindsym $mod+o exec ~/.appimage/Obsidian-1.7.5.AppImage
+    bindsym $mod+o exec ~/.appimage/Obsidian.AppImage
 
     # Kill focused window
     bindsym $mod+c kill
@@ -240,7 +239,7 @@ exec --no-startup-id obsidian
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+minus scratchpad show
+    bindsym $mod+minus scratchpad show; [class="obsidian"] fullscreen enable
 #
 # Resizing containers:
 #
@@ -297,7 +296,7 @@ client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
 #
-for_window [app_id="kitty"] opacity 0.95
+for_window [app_id="kitty"] opacity 0.95 sticky enable
 for_window [title="Network Connection"] floating enable, move position center, cursor move up 20
 for_window [app_id="one.alynx.showmethekey" title="Floating Window - Show Me The Key"] floating enable, sticky enable
 for_window [title="btop$"] floating enable, move position center, resize set 80ppt 80ppt
@@ -306,7 +305,7 @@ for_window [title="clipse$"] floating enable, move position center, resize set 5
 for_window [title="Thunar"] floating enable, resize set 60ppt 70ppt
 for_window [app_id = "blueman-manager"] floating enable
 for_window [app_id = "org.pulseaudio.pavucontrol"] floating enable, move position 70ppt 0ppt
-for_window [class="^obsidian$"] sticky enable
+for_window [class="obsidian"] move scratchpad
 
 for_window [window_role = "pop-up"] floating enable
 for_window [window_role = "bubble"] floating enable
