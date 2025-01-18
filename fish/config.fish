@@ -11,3 +11,7 @@ function y
 	rm -f -- "$tmp"
 end
 zoxide init fish | source
+
+set -x PYENV_ROOT $HOME/.pyenv
+set -x PATH  $PYENV_ROOT/bin $PATH
+pyenv init - | source
