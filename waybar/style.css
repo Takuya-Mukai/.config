@@ -38,7 +38,7 @@ tooltip {
 
 /* focused workspace(mouse-over) */
 #workspaces button.focused {
-  border-bottom: 2px solid @maroon;
+  border-bottom: 2px solid @yellow;
 }
 
 /* urgent workspace */
