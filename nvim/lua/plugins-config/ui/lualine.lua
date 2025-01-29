@@ -1,7 +1,6 @@
 require('lualine').setup{
   options = {
 	  globalstatus = true,
-    theme = "catppuccin",
       -- ... the rest of your lualine config 	
     component_separators = {left = '', right = ''},
     section_separators = {left = '', right = ''},

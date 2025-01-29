@@ -1,3 +1,5 @@
+#!/usr/bin/fish
+
 # Kanagawa Fish shell theme
 # A template was taken and modified from Tokyonight:
 # https://github.com/folke/tokyonight.nvim/blob/main/extras/fish_tokyonight_night.fish
@@ -33,21 +35,3 @@ set -g fish_pager_color_progress $comment
 set -g fish_pager_color_prefix $cyan
 set -g fish_pager_color_completion $foreground
 set -g fish_pager_color_description $comment
-
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
-
-function y
-	set tmp (mktemp -t "yazi-cwd.XXXXXX")
-	yazi $argv --cwd-file="$tmp"
-	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-		builtin cd -- "$cwd"
-	end
-	rm -f -- "$tmp"
-end
-zoxide init fish | source
-
-set -x PYENV_ROOT $HOME/.pyenv
-set -x PATH  $PYENV_ROOT/bin $PATH
-pyenv init - | source

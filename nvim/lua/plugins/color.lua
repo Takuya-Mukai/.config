@@ -1,7 +1,11 @@
 return{
+  -- {
+  --   "catppuccin/nvim", name = 'catppuccin', priority = 1000,
+  --   config = function() require 'plugins-config.color.catppuccin' end,
+  -- },
   {
-    "catppuccin/nvim", name = 'catppuccin', priority = 1000,
-    config = function() require 'plugins-config.color.catppuccin' end,
+    "rebelot/kanagawa.nvim",
+    config = function() require 'plugins-config.color.kanagawa' end,
   },
   {
     "HiPhish/Rainbow-delimiters.nvim",

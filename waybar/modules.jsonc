@@ -35,12 +35,12 @@
     },
     "clock#time": {
         // "timezone": "America/New_York",
-      "format": "<span color=\"#eba0ac\">  </span>{:%H:%M}",
+      "format": "<span color=\"#E46876\">  </span>{:%H:%M}",
       "interval": 60,
       "tooltip": false,
     },
     "clock#date": {
-      "format": "<span color=\"#cba6f7\">   </span>{:%Y/%m/%d}",
+      "format": "<span color=\"#658594\">   </span>{:%Y/%m/%d}",
       "tooltip-format": "<tt>{calendar}</tt>",
       "interval": 360,
       "calendar": {
@@ -50,20 +50,20 @@
         "on-scroll": 1,
         "on-click-right": "mode",
         "format": {
-          "months": "<span color='#c0caf5'><b>{}</b></span>",
-          "days": "<span color='#c0caf5'><b>{}</b></span>",
-          "weeks": "<span color='#cba6f7'><b>W{}</b></span>",
-          "weekdays": "<span color='#fab387'><b>{}</b></span>",
-          "today": "<span color='#f38ba8'><b><u>{}</u></b></span>",
+          "months": "<span color='#A3D4D5'><b>{}</b></span>",
+          "days": "<span color='#7FB4CA'><b>{}</b></span>",
+          "weeks": "<span color='#957FB8'><b>W{}</b></span>",
+          "weekdays": "<span color='#E6C384'><b>{}</b></span>",
+          "today": "<span color='#FFA066'><b><u>{}</u></b></span>",
         },
       },
     },
     "cpu": {
-        "format": "<span color=\"#cba6f7\">  </span>{usage}%",
+        "format": "<span color=\"#9CABCA\">  </span>{usage}%",
         "on-click": "kitty --config background_opacity=0.65 btop"
     },
     "memory": {
-        "format": "<span color=\"#cba6f7\"> </span>{used}GiB",
+        "format": "<span color=\"#98BB6C\"> </span>{used}GiB",
         "tooltip": false,
         "on-click": "kitty --config background_opacity=0.65 btop"
     },
@@ -71,8 +71,8 @@
         // "thermal-zone": 2,
         "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        "format": "<span color=\"#89b4fa\"> </span>{temperatureC}°C",
-        "format-critical": "<span color=\"#f38ba8\"> </span>{temperatureC}°C",
+        "format": "<span color=\"#7E9CD8\"> </span>{temperatureC}°C",
+        "format-critical": "<span color=\"#E46876\"> </span>{temperatureC}°C",
         "tooltip": false,
         "on-click": "kitty --config background_opacity=0.65 btop"
     },
@@ -96,12 +96,12 @@
       }
     },
     "network": {
-        "format-wifi": "<span color=\"#94e2d5\">    </span>{signalStrength}%",
-        "format-ethernet": "<span color=\"#94e2d5\"></span> ",
-        "tooltip-format-wifi": "{essid}\r{ifname}: {ipaddr}/{cidr}\r<span color=\"#89b4fa\"> </span>: {bandwidthDownBits}\r<span color=\"#f38ba8\"> </span>: {bandwidthUpBits}",
-        "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr}\r<span color=\"#89b4fa\"> </span>: {bandwidthDownBits}\r<span color=\"#f38ba8\"> </span>: {bandwidthUpBits}",
-        "format-linked": " <span color=\"#94e2d5\"></span> ",
-        "format-disconnected": " <span color=\"#e0af68\"></span> ",
+        "format-wifi": "<span color=\"#FFA066\">    </span>{signalStrength}%",
+        "format-ethernet": "<span color=\"#FFA066\"></span> ",
+        "tooltip-format-wifi": "{essid}\r{ifname}: {ipaddr}/{cidr}\r<span color=\"#7E9CD8\"> </span>: {bandwidthDownBits}\r<span color=\"#E46876\"> </span>: {bandwidthUpBits}",
+        "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr}\r<span color=\"#7E9CD8\"> </span>: {bandwidthDownBits}\r<span color=\"#E46876\"> </span>: {bandwidthUpBits}",
+        "format-linked": " <span color=\"#FFA066\"></span> ",
+        "format-disconnected": " <span color=\"#727169\"></span> ",
         //"format-alt": " {ifname}: {ipaddr}/{cidr} ",
         "on-click":"nm-connection-editor",
     },
@@ -126,10 +126,10 @@
     //    "on-click": "pavucontrol"
     //},
     "wireplumber": {
-      "format": "<span color= \"#fab387\">{icon}</span>{volume}%",
-      "format-muted": "<span color= \"#9399b2\"> </span>",
+      "format": "{icon}{volume}%",
+      "format-muted": "<span color= \"#727169\"> </span>",
       "on-click": "pavucontrol",
-      "format-icons": ["<span color= \"#eba0ac\">  </span>", "<span color= \"#eba0ac\">  </span>", "<span color= \"#eba0ac\">   </span>"],
+      "format-icons": ["<span color= \"#D27E99\">  </span>", "<span color= \"#D27E99\">  </span>", "<span color= \"#D27E99\">   </span>"],
       "recerse-scrolling": 1, 
     },
     "custom/spotify": {
@@ -160,14 +160,14 @@
       "tooltip": false,
       "format": "{icon}",
       "format-icons": {
-        "notification": "<span color=\"#f9e2af\"> </span>,<span foreground=\"#f38ba8\"><sup></sup></span>",
-        "none": "<span color=\"#f9e2af\"> </span>",
-        "dnd-notification": "<span color=\"#89dceb\"></span> </span>,<span foreground=\"#f38ba8\"><sup></sup></span>",
-        "dnd-none": "<span color=\"#89dceb\"> </span>",
-        "inhibited-notification": "<span color=\"#f9e2af\"> </span>,<span foreground=\"#f38ba8\"><sup></sup></span>",
-        "inhibited-none": "<span color=\"#f9e2af\"> </span>",
-        "dnd-inhibited-notification": "<span color=\"#89dceb\"> </span>,<span foreground=\"#f38ba8\"><sup></sup></span>",
-        "dnd-inhibited-none": "<span color=\"#89dceb\"> </span>"
+        "notification": "<span color=\"#E6C384\"> </span>,<span foreground=\"#E46876\"><sup></sup></span>",
+        "none": "<span color=\"#E6C384\"> </span>",
+        "dnd-notification": "<span color=\"#7FB4CA\"></span> </span>,<span foreground=\"#E46876\"><sup></sup></span>",
+        "dnd-none": "<span color=\"#7FB4CA\"> </span>",
+        "inhibited-notification": "<span color=\"#E6C384\"> </span>,<span foreground=\"#E46876\"><sup></sup></span>",
+        "inhibited-none": "<span color=\"#E6C384\"> </span>",
+        "dnd-inhibited-notification": "<span color=\"#7FB4CA\"> </span>,<span foreground=\"#E46876\"><sup></sup></span>",
+        "dnd-inhibited-none": "<span color=\"#7FB4CA\"> </span>"
       },
       "return-type": "json",
       "exec-if": "which swaync-client",
@@ -177,37 +177,37 @@
       "escape": true
     },
     "custom/lock":{
-      "format": "<span color=\"#f9e2af\">  </span>",
+      "format": "<span color=\"#E6C384\">  </span>",
       "on-click": "swaylock --clock --indicator --screenshots --effect-blur 7x7 --fade-in 0.3",
       "tooltip-format": "Lock",
     },
     "custom/reboot":{
-      "format": "<span color=\"#89b4fa\">  </span>",
+      "format": "<span color=\"#7E9CD8\">  </span>",
       "on-click": "reboot",
       "tooltip-format": "Restart",
     },
     "custom/logout":{
-      "format": "<span color=\"#f5c2e7\">  </span>",
+      "format": "<span color=\"#D27E99\">  </span>",
       "on-click": "swaymsg exit",
       "tooltip-format": "LogOut",
     },
     "custom/power":{
-      "format": "<span color=\"#eba0ac\">  </span>",
+      "format": "<span color=\"#FF5D62\">  </span>",
       "on-click": "shutdown now",
       "tooltip-format": "ShutDown",
     },
     "custom/sleep":{
-      "format": "<span color=\"#cba6f7\"> ⏾</span>",
+      "format": "<span color=\"#FFA066\"> ⏾</span>",
       "on-click": "swaylock --clock --indicator --screenshots --effect-blur 7x7 --fade-in 0.3",
       "tooltip-format": "Sleep",
     },
     "custom/filemanager":{
-      "format": "<span color=\"#74c7ec\">  </span>",
+      "format": "<span color=\"#7E9CD8\">  </span>",
       "on-click": "thunar",
       "tooltip-format": "Filer",
     },
     "custom/drawer":{
-      "format": "<span color=\"#74c7ec\">  </span>",
+      "format": "<span color=\"#7E9CD8\">  </span>",
       "on-click": "nwg-drawer",
       "tooltip-format": "drawer",
     },

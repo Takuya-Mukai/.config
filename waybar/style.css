@@ -1,16 +1,16 @@
-@import "./mocha.css";
+@import "./kanagawa.css";
 * {
   font-family: Font Awesome;
   font-weight: 500;
   font-size: 11.0pt;
-  color: @text;
+  color: @fujiWhite;
   border-radius: 0;
   
 }
 
 /* main waybar */
 window#waybar {
-  background: rgba(17, 17, 27, 0.5);
+  background: rgba(31, 31, 40, 1.0);
 }
 
 /* when hovering over modules */
@@ -33,18 +33,18 @@ tooltip {
 
 /* visible workspace */
 #workspaces button.visible {
-  border-bottom: 2px solid @sapphire;
+  border-bottom: 2px solid @crystalBlue;
 }
 
 /* focused workspace(mouse-over) */
 #workspaces button.focused {
-  border-bottom: 2px solid @yellow;
+  border-bottom: 2px solid @surimiOrange;
 }
 
 /* urgent workspace */
 #workspaces button.urgent {
   animation: blink 1s infinite; /* 点滅アニメーション */
-  border-bottom: 2px solid @red; /* 赤い下線を追加 */
+  border-bottom: 2px solid @waveRed; /* 赤い下線を追加 */
 
 }
 
