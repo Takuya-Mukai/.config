@@ -30,6 +30,7 @@
 "julia" = ""
 # about app
 "alacritty" = " "
+"zen browser" = ""
 "firefox" = ""
 "chrome" = ""
 "chromium" = ""
@@ -70,6 +71,9 @@
 "show me the key" = "󰌓"
 "elisa" = ""
 "zathura" = "󰈙"
+"calibre" = ""
+"kdeconnect" = ""
+"zoom" = ""
 [other]
 fallback_icon = ""
 deduplicate_icons = false

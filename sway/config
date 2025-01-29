@@ -17,7 +17,7 @@ set $right l
 # Your preferred terminal emulator
 set $term kitty
 # set $browser vivaldi --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime %U
-set $browser firefox
+set $browser zen-browser
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -32,6 +32,7 @@ output * bg ~/.config/sway/backgrounds/Fantasy-Lanscape-Night.png fill
 #
 # Example configuration:
 #
+# archdesk
 output DP-1 resolution 1920x1080 position 0,0
 output HDMI-A-1 resolution 1920x1080 position 1920,0
 workspace 1 output DP-1
@@ -44,6 +45,19 @@ workspace 7 output HDMI-A-1
 workspace 8 output HDMI-A-1
 workspace 9 output HDMI-A-1
 workspace 10 output HDMI-A-1
+# archmini
+output DP-2 resolution 1920x1080 position 0,864
+output HDMI-A-2 position 0,0 scale 1.25
+workspace 1 output DP-2
+workspace 2 output DP-2
+workspace 3 output DP-2
+workspace 4 output DP-2
+workspace 5 output DP-2
+workspace 6 output HDMI-A-2
+workspace 7 output HDMI-A-2
+workspace 8 output HDMI-A-2
+workspace 9 output HDMI-A-2
+workspace 10 output HDMI-A-2
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -74,6 +88,7 @@ exec ./scripts/optimize4ExitNode.sh
 exec nm-applet --sm-disable &
 exec ./scripts/wayvnc_server.sh
 exec rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov -t 500
+exec --no-startup-id $HOME/.appimage/Obsidian.AppImage
 ### Input configuration
 #
 # Example configuration:
@@ -99,8 +114,9 @@ exec rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov -t 
     bindsym $mod+Return exec $term
     # Start web browser
     bindsym $mod+q exec $browser
-    # Start web browser
-    bindsym $mod+o exec ~/.appimage/Obsidian-1.7.5.AppImage
+    # start obsidian
+    # bindsym $mod+o exec bash -c '[ "$(pgrep -x obsidian)" ] && swaymsg [class="obsidian"] scratchpad show, fullscreen toggle, fullscreen enable || ~/.appimage/Obsidian.AppImage'
+    bindsym $mod+o exec ~/.config/sway/scripts/obsidian.sh
 
     # Kill focused window
     bindsym $mod+c kill
@@ -212,6 +228,9 @@ exec rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov -t 
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
+    # bindsym $mod+f exec ./scripts/focus_fullscreen.sh
+
+
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
@@ -279,7 +298,7 @@ bar {
 #
 # how it look
 #
-gaps inner 8
+gaps inner 0
 gaps outer 0
 default_border pixel 2
 # target                 title     bg    text   indicator  border
@@ -291,7 +310,7 @@ client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
 #
-for_window [app_id="kitty"] opacity 0.95
+for_window [app_id="kitty"] opacity 0.95 sticky enable
 for_window [title="Network Connection"] floating enable, move position center, cursor move up 20
 for_window [app_id="one.alynx.showmethekey" title="Floating Window - Show Me The Key"] floating enable, sticky enable
 for_window [title="btop$"] floating enable, move position center, resize set 80ppt 80ppt
@@ -300,6 +319,7 @@ for_window [title="clipse$"] floating enable, move position center, resize set 5
 for_window [title="Thunar"] floating enable, resize set 60ppt 70ppt
 for_window [app_id = "blueman-manager"] floating enable
 for_window [app_id = "org.pulseaudio.pavucontrol"] floating enable, move position 70ppt 0ppt
+for_window [class="obsidian"] move scratchpad, scratchpad show
 
 for_window [window_role = "pop-up"] floating enable
 for_window [window_role = "bubble"] floating enable
