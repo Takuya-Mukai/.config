@@ -52,6 +52,18 @@ require('mason-lspconfig').setup_handlers {
     }
   end,
 }
+-- local lsp_servers = {
+--   'lua_ls',
+--   'julials',
+--   'bash-language-server',
+--   'beautysh',
+--   'bashls'
+-- }
+-- require("mason-lspconfig").setup({
+--   ensure_installed = lsp_servers,
+--   automatic_installation = true,
+--
+-- })
 
 -- command to start lua_ls if not started
 vim.api.nvim_create_autocmd('BufEnter', {
