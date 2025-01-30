@@ -59,11 +59,11 @@
       },
     },
     "cpu": {
-        "format": "<span color=\"#9CABCA\">  </span>{usage}%",
+        "format": "<span color=\"#938AA9\">  </span>{usage}%",
         "on-click": "kitty --config background_opacity=0.65 btop"
     },
     "memory": {
-        "format": "<span color=\"#98BB6C\"> </span>{used}GiB",
+        "format": "<span color=\"#76946A\"> </span>{used}GiB",
         "tooltip": false,
         "on-click": "kitty --config background_opacity=0.65 btop"
     },
@@ -129,7 +129,7 @@
       "format": "{icon}{volume}%",
       "format-muted": "<span color= \"#727169\"> </span>",
       "on-click": "pavucontrol",
-      "format-icons": ["<span color= \"#D27E99\">  </span>", "<span color= \"#D27E99\">  </span>", "<span color= \"#D27E99\">   </span>"],
+      "format-icons": ["<span color= \"#C34043\">  </span>", "<span color= \"#C34043\">  </span>", "<span color= \"#C34043\">   </span>"],
       "recerse-scrolling": 1, 
     },
     "custom/spotify": {
