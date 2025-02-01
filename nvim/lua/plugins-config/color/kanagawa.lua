@@ -1,4 +1,4 @@
-require("kanagawa").load("wave")
+require("kanagawa").load("dragon")
 require("kanagawa").setup({
   overrides = function(colors)
     local theme = colors.theme

@@ -118,6 +118,7 @@ exec --no-startup-id $HOME/.appimage/Obsidian.AppImage
     # start obsidian
     # bindsym $mod+o exec bash -c '[ "$(pgrep -x obsidian)" ] && swaymsg [class="obsidian"] scratchpad show, fullscreen toggle, fullscreen enable || ~/.appimage/Obsidian.AppImage'
     bindsym $mod+o exec ~/.config/sway/scripts/obsidian.sh
+    bindsym $mod+Ctrl+w exec ~/.config/sway/scripts/waydroid.sh
 
     # Kill focused window
     bindsym $mod+c kill
@@ -309,13 +310,13 @@ default_border pixel 2
 for_window [app_id="kitty"] opacity 0.95 sticky enable
 for_window [title="Network Connection"] floating enable, move position center, cursor move up 20
 for_window [app_id="one.alynx.showmethekey" title="Floating Window - Show Me The Key"] floating enable, sticky enable
-for_window [title="btop$"] floating enable, move position center, resize set 80ppt 80ppt
+for_window [title="btop$"] floating enable, move position center
 for_window [class="PenTablet"] floating enable
 for_window [title="clipse$"] floating enable, move position center, resize set 50ppt 80ppt
 for_window [title="Thunar"] floating enable, resize set 60ppt 70ppt
 for_window [app_id = "blueman-manager"] floating enable
 for_window [app_id = "org.pulseaudio.pavucontrol"] floating enable, move position 70ppt 0ppt
-for_window [class="obsidian"] move scratchpad, scratchpad show
+for_window [class="obsidian"] move scratchpad
 
 for_window [window_role = "pop-up"] floating enable
 for_window [window_role = "bubble"] floating enable
@@ -327,6 +328,7 @@ for_window [app_id = "floating"] floating enable
 for_window [app_id = "floating_update"] floating enable, resize set width 1000px height 600px
 for_window [class = "(?i)pinentry"] floating enable
 for_window [title = "Administrator privileges required"] floating enable
+for_window [app_id = "Bitwarden"] floating enable
 
 # about firefox
 for_window [title = "About Mozilla Firefox"] floating enable
