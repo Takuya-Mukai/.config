@@ -75,6 +75,7 @@
 "kdeconnect" = ""
 "zoom" = ""
 "waydroid" = ""
+"saber" = ""
 [other]
 fallback_icon = ""
 deduplicate_icons = false
