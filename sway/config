@@ -35,7 +35,7 @@ output * bg ~/.config/sway/backgrounds/cave.png fill
 #
 # archdesk
 output DP-1 resolution 1920x1080 position 0,0 transform 270
-output HDMI-A-1 resolution 1920x1080 position 1080,475
+output HDMI-A-1 resolution 1920x1080 position 1080,0 transform 90
 workspace 1 output DP-1
 workspace 2 output DP-1
 workspace 3 output DP-1
@@ -89,7 +89,7 @@ exec ./scripts/optimize4ExitNode.sh
 exec nm-applet --sm-disable &
 exec ./scripts/wayvnc_server.sh
 exec rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov -t 500
-exec --no-startup-id $HOME/.appimage/Obsidian.AppImage
+exec --no-startup-id obsidian
 ### Input configuration
 #
 # Example configuration:
@@ -107,6 +107,7 @@ exec --no-startup-id $HOME/.appimage/Obsidian.AppImage
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+input 1386:827:Wacom_Intuos_S_2_Pen map_to_region 1080 100 1080 675
 ### Key bindings
 #
 # Basics:
@@ -116,7 +117,6 @@ exec --no-startup-id $HOME/.appimage/Obsidian.AppImage
     # Start web browser
     bindsym $mod+q exec $browser
     # start obsidian
-    # bindsym $mod+o exec bash -c '[ "$(pgrep -x obsidian)" ] && swaymsg [class="obsidian"] scratchpad show, fullscreen toggle, fullscreen enable || ~/.appimage/Obsidian.AppImage'
     bindsym $mod+o exec ~/.config/sway/scripts/obsidian.sh
     bindsym $mod+Ctrl+w exec ~/.config/sway/scripts/waydroid.sh
 
@@ -316,7 +316,7 @@ for_window [title="clipse$"] floating enable, move position center, resize set 5
 for_window [title="Thunar"] floating enable, resize set 60ppt 70ppt
 for_window [app_id = "blueman-manager"] floating enable
 for_window [app_id = "org.pulseaudio.pavucontrol"] floating enable, move position 70ppt 0ppt
-for_window [class="obsidian"] move scratchpad
+for_window [title="Obsidian"] move scratchpad
 
 for_window [window_role = "pop-up"] floating enable
 for_window [window_role = "bubble"] floating enable
