@@ -8,4 +8,3 @@ vim.keymap.set({'n', 'x'}, '<Leader>L', function()
   end)
   return ':noh<CR>'
 end, {expr = true})
-

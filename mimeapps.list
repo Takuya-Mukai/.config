@@ -13,6 +13,7 @@ application/xhtml+xml=firefox.desktop;zen-beta.desktop;zen-browser.desktop;zen.d
 application/x-extension-xhtml=firefox.desktop;zen-beta.desktop;zen-browser.desktop;zen.desktop;
 application/x-extension-xht=firefox.desktop;zen-beta.desktop;zen-browser.desktop;zen.desktop;
 inode/directory=nvim.desktop;
+application/zip=org.gnome.Nautilus.desktop;
 
 [Default Applications]
 audio/AMR-WB=vlc.desktop

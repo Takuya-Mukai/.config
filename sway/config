@@ -35,7 +35,7 @@ output * bg ~/.config/sway/backgrounds/cave.png fill
 #
 # archdesk
 output DP-1 resolution 1920x1080 position 0,0 transform 270
-output HDMI-A-1 resolution 1920x1080 position 1080,0 transform 90
+output HDMI-A-1 resolution 1920x1080 position 1080,420 
 workspace 1 output DP-1
 workspace 2 output DP-1
 workspace 3 output DP-1
@@ -47,8 +47,8 @@ workspace 8 output HDMI-A-1
 workspace 9 output HDMI-A-1
 workspace 10 output HDMI-A-1
 # archmini
-output DP-2 resolution 1920x1080 position 0,864 transform 90
-output HDMI-A-2 position 0,0 scale 1.25
+output DP-2 resolution 1920x1080 position 0,0
+# output HDMI-A-2 position 0,0 scale 1.25
 workspace 1 output DP-2
 workspace 2 output DP-2
 workspace 3 output DP-2

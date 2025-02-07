@@ -11,7 +11,7 @@ return{
     "HiPhish/Rainbow-delimiters.nvim",
     dependencies = {
       'nvim-treesitter/nvim-treesitter',
-      'catppuccin/nvim',
+      'rebelot/kanagawa.nvim',
     },
     config = function() require 'plugins-config.color.rainbow-delimiters' end,
   },
@@ -19,6 +19,6 @@ return{
     "nvim-treesitter/nvim-treesitter",
     config = function() require 'plugins-config.color.nvim-treesitter' end,
     build = ":TSUpdate",
-    dependencies = {'catppuccin/nvim'},
+    dependencies = {'rebelot/kanagawa.nvim'},
   },
 }
