@@ -121,5 +121,8 @@ return{
   },
   {
     "gpanders/nvim-parinfer",
-  }
+  },
+  {
+    "sindrets/diffview.nvim",
+  },
 }

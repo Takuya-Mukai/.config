@@ -51,3 +51,17 @@ zoxide init fish | source
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH  $PYENV_ROOT/bin $PATH
 pyenv init - | source
+
+# ~/.config/fish/config.fish
+
+alias ei='eza --icons --git'
+alias ea='eza -a --icons --git'
+alias ee='eza -aahl --icons --git'
+alias et='eza -T -L 3 -a -I "node_modules|.git|.cache" --icons'
+alias eta='eza -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
+alias ls='eza --icons --git'
+alias la='eza -a --icons --git'
+alias ll='eza -aahl --icons --git'
+alias lt='eza -T -L 3 -a -I "node_modules|.git|.cache" --icons'
+alias lta='eza -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
+alias l='clear; eza --icons --git'
