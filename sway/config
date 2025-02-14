@@ -77,7 +77,7 @@ exec swayidle -w \
 exec fcitx5
 # exec wl-paste --type text --watch clipist store
 # exec wl-paste --type image --watch clipist store
-exec bash ~/.config/sway/scripts/output.sh
+exec_always bash ~/.config/sway/scripts/output.sh
 exec udiskie
 exec clipse -listen
 exec swaync
