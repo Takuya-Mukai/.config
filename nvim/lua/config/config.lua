@@ -62,4 +62,20 @@ vim.api.nvim_set_keymap("t", "jk", "<C-\\><C-N>", { noremap = true, silent = tru
 -- Don't auto-insert line break when selecting completion
 vim.cmd("autocmd TermOpen * setlocal nonumber")
 vim.cmd("autocmd TermOpen * setlocal norelativenumber")
--- Vimscript コマンドを Lua から実行
+
+local fcitx5state = vim.fn.system("fcitx5-remote"):sub(1, 1)
+
+vim.api.nvim_create_autocmd("InsertLeave", {
+  callback = function()
+    fcitx5state = vim.fn.system("fcitx5-remote"):sub(1, 1)
+    vim.fn.system("fcitx5-remote -c")
+  end
+})
+
+vim.api.nvim_create_autocmd("InsertEnter", {
+  callback = function()
+    if fcitx5state == "2" then
+      vim.fn.system("fcitx5-remote -o")
+    end
+  end
+})

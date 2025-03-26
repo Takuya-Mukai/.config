@@ -13,7 +13,6 @@
 "rnote" = ""
 "lazygit" = "󰒲"
 "android-file-transfer" = "󰓷"
-"github" = ""
 "arch" = "󰣇"
 "rust" = ""
 "private browsing" = ""
@@ -75,6 +74,8 @@
 "zoom" = ""
 "waydroid" = ""
 "saber" = ""
+"jellyfin" = ""
+"pomodorolm" = ""
 [other]
 fallback_icon = ""
 deduplicate_icons = false

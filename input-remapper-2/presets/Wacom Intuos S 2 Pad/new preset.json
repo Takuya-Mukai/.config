@@ -3,31 +3,6 @@
         "input_combination": [
             {
                 "type": 1,
-                "code": 277,
-                "origin_hash": "74e785c147e8e23ffddee3e310899021"
-            }
-        ],
-        "target_uinput": "keyboard",
-        "output_symbol": "KEY_UP",
-        "name": "BTN_FORWARD",
-        "mapping_type": "key_macro"
-    },
-    {
-        "input_combination": [
-            {
-                "type": 1,
-                "code": 278,
-                "origin_hash": "74e785c147e8e23ffddee3e310899021"
-            }
-        ],
-        "target_uinput": "keyboard",
-        "output_symbol": "KEY_DOWN",
-        "mapping_type": "key_macro"
-    },
-    {
-        "input_combination": [
-            {
-                "type": 1,
                 "code": 273,
                 "origin_hash": "74e785c147e8e23ffddee3e310899021"
             }
@@ -40,7 +15,19 @@
         "input_combination": [
             {
                 "type": 1,
-                "code": 272,
+                "code": 278,
+                "origin_hash": "74e785c147e8e23ffddee3e310899021"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "KEY_LEFTCTRL + KEY_F",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 277,
                 "origin_hash": "74e785c147e8e23ffddee3e310899021"
             }
         ],

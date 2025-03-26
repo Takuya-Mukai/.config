@@ -65,3 +65,5 @@ alias ll='eza -aahl --icons --git'
 alias lt='eza -T -L 3 -a -I "node_modules|.git|.cache" --icons'
 alias lta='eza -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
 alias l='clear; eza --icons --git'
+
+alias cat='bat'
