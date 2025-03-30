@@ -18,9 +18,19 @@ declare -A apps=(
   ["obsidian"]="7"
 )
 
+# アプリケーションの起動コマンド名の対応
+declare -A app_exec=(
+  ["pomodorolm"]="pomodorolm"
+  ["saber"]="saber"
+  ["input-remapper-gtk"]="input-remapper-gtk"
+  ["com.github.iwalton3.jellyfin-media-player"]="jellyfinmediaplayer"
+  ["obsidian"]="obsidian"
+)
+
 # 各アプリケーションに対して処理を行う
 for app in "${!apps[@]}"; do
   workspace="${apps[$app]}"
+  exec_name="${app_exec[$app]}" # 起動コマンド名を取得
 
   # swayウィンドウツリー構造を取得
   tree=$(swaymsg -t get_tree)
@@ -31,10 +41,9 @@ for app in "${!apps[@]}"; do
     swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
   else
     # 起動していない場合は、アプリケーションを起動し、指定されたワークスペースに移動
-    swaymsg "exec $app; [app_id=\"$app\"] move container to workspace number $workspace"
+    swaymsg "exec $exec_name; [app_id=\"$app\"] move container to workspace number $workspace"
   fi
 done
-
 notify-send "Study Mode will start.\
   While ${study_time}, key bindings are disabled."
 
