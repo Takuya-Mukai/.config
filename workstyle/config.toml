@@ -10,7 +10,6 @@
 # precedence is given in order of apparition in this file.
 
 # about contents
-"rnote" = ""
 "lazygit" = "󰒲"
 "android-file-transfer" = "󰓷"
 "arch" = "󰣇"
@@ -75,7 +74,8 @@
 "waydroid" = ""
 "saber" = ""
 "jellyfin" = ""
-"pomodorolm" = ""
+"pomodorolm" = ""
+"nextcloud" = ""
 [other]
 fallback_icon = ""
 deduplicate_icons = false

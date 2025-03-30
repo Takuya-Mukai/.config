@@ -87,7 +87,7 @@ exec /usr/bin/kdeconnectd
 exec sway-audio-idle-inhibit
 exec ./scripts/optimize4ExitNode.sh
 exec nm-applet --sm-disable &
-exec ./scripts/wayvnc_server.sh
+exec_always ~/.config/sway/scripts/wayvnc_server.sh
 exec rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov -t 500
 exec --no-startup-id obsidian
 exec otd-daemon
@@ -285,6 +285,60 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+mode "study" {
+    bindsym --release $mod+Return exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+q exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+e exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+r exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+c exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+space exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+Return exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+d exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+1 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+2 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+3 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+4 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+5 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+6 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+7 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+8 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+9 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+0 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+1 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+2 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+3 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+4 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+5 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+6 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+7 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+8 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+9 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+0 exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+s exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+f exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+g exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+semicolon exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+slash exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+comma exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+period exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+equal exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+bracketleft exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+bracketright exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+backslash exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+semicolon exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+apostrophe exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+comma exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+period exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+slash exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+grave exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+space exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Tab exec notify-send "Study Mode: Key operations are restricted"
+    bindsym --release $mod+Shift+Tab exec notify-send "Study Mode: Key operations are restricted"
+}
+
+# Keybinding to start Study Mode (example: $mod+Shift+s)
+bindsym $mod+Shift+s exec "kitty --class floating-study-terminal -e $HOME/.config/sway/start_study_mode.sh"
+
 #
 # Status Bar:
 #
@@ -326,6 +380,7 @@ for_window [title="Thunar"] floating enable, resize set 60ppt 70ppt
 for_window [app_id = "blueman-manager"] floating enable
 for_window [app_id = "org.pulseaudio.pavucontrol"] floating enable, move position 70ppt 0ppt
 for_window [app_id="obsidian"] move scratchpad
+for_window [class="floating-study-terminal"] floating enable, resize set width 100px height 10px
 
 for_window [window_role = "pop-up"] floating enable
 for_window [window_role = "bubble"] floating enable
@@ -343,6 +398,9 @@ for_window [app_id = "Bitwarden"] floating enable
 for_window [title = "About Mozilla Firefox"] floating enable
 for_window [window_role = "About"] floating enable
 for_window [app_id="firefox" title="Library"] floating enable, border pixel 1, sticky enable
+for_window [app_id="pomodorolm"] floating enable
+for_window [app_id="input-remapper-gtk"] floating enable
+
 
 # add steamos-compositor-plus if you want to use steam
 # # about steam

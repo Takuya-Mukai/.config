@@ -22,7 +22,7 @@ yay -S qt5-wayland qt6-wayland --noconfirm
 # install theme settings
 yay -S nwg-look qt6ct qt5ct --noconfirm
 # install cli tools
-yay -S fish neovim tmux ripgrep yazi kitty curl texlive npm nodejs lazygit udiskie zoxide fzf --noconfirm
+yay -S fish neovim tmux ripgrep yazi kitty curl texlive npm nodejs lazygit udiskie zoxide fzf eza --noconfirm
 # install for neovim
 yay -S metalua penlight luarocks cmake --noconfirm
 # install japanese input and font
@@ -53,7 +53,7 @@ yay -S rocm-smi-lib --noconfirm
 yay -S zathura zathura-pdf-mupdf
 # install hyprland
 # yay -S hyprland hyprcursor hyprpaper hyprshot hypridle hyprlock hyprshade thunar clipse --noanswerclean --noanswerdiff
-yay -S sway swaybg scdoc wl-clipboard clipse swaylock-effects-git swayidle sov workstyle nwg-displays swaync --noconfirm
+yay -S sway swaybg scdoc wl-clipboard clipse swaylock-effects-git swayidle sov workstyle nwg-displays swaync autotiling --noconfirm
 # install tools for screenshot
 yay -S grim slurp swappy --noconfirm
 # for screen share

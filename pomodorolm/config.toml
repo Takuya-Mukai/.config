@@ -9,6 +9,6 @@ minimize_to_tray = true
 minimize_to_tray_on_close = true
 muted = false
 short_break_duration = 300
-theme = "gruvbox"
+theme = "popping and locking"
 tick_sounds_during_work = false
 tick_sounds_during_break = false
