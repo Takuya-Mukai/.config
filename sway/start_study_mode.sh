@@ -3,9 +3,6 @@
 # 勉強時間を入力させる (時間単位)
 read -p "Enter the study time here: " study_time
 
-# バックグラウンドでタイマースクリプトを実行し、秒数を渡す
-"$HOME/.config/sway/study_timer.sh" "$study_time" &
-
 # Study Mode に切り替え
 swaymsg mode "study"
 
@@ -13,7 +10,7 @@ swaymsg mode "study"
 declare -A apps=(
     ["pomodorolm"]="7"
     ["saber"]="1"
-    ["input-remapper-gtk"]="5"
+    ["org.kde.polkit-kde-authentication-agent-1"]="5"
     ["com.github.iwalton3.jellyfin-media-player"]="8"
     ["obsidian"]="7"
 )
@@ -22,7 +19,7 @@ declare -A apps=(
 declare -A app_exec=(
     ["pomodorolm"]="pomodorolm"
     ["saber"]="saber"
-    ["input-remapper-gtk"]="input-remapper-gtk"
+    ["org.kde.polkit-kde-authentication-agent-1"]="input-remapper-gtk"
     ["com.github.iwalton3.jellyfin-media-player"]="jellyfinmediaplayer"
     ["obsidian"]="obsidian"
 )
@@ -35,23 +32,38 @@ for app in "${!apps[@]}"; do
   # jq の実行結果を変数に格納し、エラーメッセージを除外する
   if swaymsg -t get_tree | jq -e 'recurse(.nodes[]?, .floating_nodes[]?) | select(.app_id == "'"$app"'" or .scratchpad_state == "hidden")' > /dev/null; then
     # アプリが既に起動している場合
-    swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
+    if [[ "$app" == "obsidian" ]]; then
+      swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
+      swaymsg "[app_id=\"$app\"] floating disable"
+    else
+      swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
+    fi
     echo "Info: $app is already running and moved to workspace $workspace."
+
   else
     # アプリが起動していない場合
     echo "Warning: $app is not running. Starting $exec_name..."
     swaymsg "exec $exec_name"
-
-    # アプリケーションが起動するまで待機 (最大10秒)
     sleep 1
+
     # 起動後にワークスペースに移動
-    swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
+    if [[ "$app" == "obsidian" ]]; then
+      swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
+      swaymsg "[app_id=\"$app\"] floating disable"
+    else
+      swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
+    fi
     echo "Info: $app started and moved to workspace $workspace."
   fi
 done
 
 notify-send "Study Mode will start.\
   While ${study_time}, key bindings are disabled."
+# 指定時間待機
+sleep "$study_time"
 
-# このスクリプトはここで終了し、kittyが閉じる
+# デフォルトモードに戻す
+swaymsg mode "default"
+notify-send "It's time to relax!"
+
 exit 0
