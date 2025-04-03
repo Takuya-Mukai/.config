@@ -59,4 +59,4 @@ yay -S grim slurp swappy --noconfirm
 # for screen share
 yay -S xdg-desktop-portal-wlr xdg-desktop-portal xwaylandvideobridge --noconfirm
 yay -S syncthing syncthing-gtk syncthingtray xppenlinux3 xorg-xwayland xorg-xhost --noconfirm
-sudo pacman -S timeshift neofetch tailscale ethtool kdeconnect
+yay -S timeshift neofetch tailscale ethtool kdeconnect interception-caps2esc --noconfirm

@@ -2,6 +2,5 @@ sudo cp ~/.config/dotfiles/files/keyball.rules /etc/udev/rules.d/keyball44.rules
 sudo cp ~/.config/dotfiles/files/environment /etc/environment
 sudo cp ~/.config/dotfiles/files/.bashrc ~/.bashrc
 sudo cp ~/.config/dotfiles/files/.bash_profile ~/.bash_profile
-sudo cp ~/.config/dotfiles/files/environments /etc/greetd/environments
-sudo cp ~/.config/dotfiles/files/sway-config /etc/greetd/sway-config
-sudo cp ~/.config/dotfiles/files/config.toml /etc/greetd/config.toml
+sudo cp ~/.config/dotfiles/files/caps2esc.yaml /etc/interception/udevmon.d/caps2esc.yaml
+sudo cp ~/.config/dotfiles/files/caps2esc.service /etc/systemd/system/caps2esc.service
