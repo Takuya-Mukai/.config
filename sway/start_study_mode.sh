@@ -57,6 +57,8 @@ for app in "${!apps[@]}"; do
   fi
 done
 
+swaymsg "[app_id=\"floating-study-terminal\"] move scratchpad "
+
 notify-send "Study Mode will start.\
   While ${study_time}, key bindings are disabled."
 # 指定時間待機
