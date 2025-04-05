@@ -1,0 +1,35 @@
+FROM archlinux:latest
+
+RUN sed -i 's/^#Server = .*/Server = https:\/\/ftp.tsukuba.wide.ad.jp\/Linux\/archlinux\/\$repo\/os\/\$arch/' /etc/pacman.d/mirrorlist
+RUN pacman -Syy --noconfirm
+
+RUN pacman -Syu --noconfirm \
+    git \
+    curl \
+    wget \
+    base-devel \
+    python3 \
+    neovim \
+    ripgrep \
+    fzf \
+    npm \
+    yazi \
+    nodejs \
+    lazygit \
+    eza \
+    bat \
+    luarocks \
+    cmake
+
+RUN npm -g install tree-sitter-cli
+RUN npm -g install neovim
+RUN useradd -ms /bin/bash user
+USER user
+WORKDIR /home/user
+
+RUN git clone https://github.com/Takuya-Mukai/.config.git config_tmp && \
+    mkdir -p .config && \
+    mv config_tmp/nvim .config/nvim && \
+    rm -rf config_tmp
+
+RUN nvim -c 'q'

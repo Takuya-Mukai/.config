@@ -1,0 +1,28 @@
+services:
+  neovim:
+    build:
+      context: .
+      dockerfile: Dockerfile.nvim
+      args:
+        GITHUB_USER: your_github_username
+        CONFIG_REPO: nvim-config-backup
+    container_name: neovim
+    volumes:
+      - ./projects:/home/user/projects
+    tty: true
+    stdin_open: true
+    networks:
+      - dev-network
+
+  python-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    container_name: python-dev
+    volumes:
+      - ./projects:/app
+    networks:
+      - dev-network
+
+networks:
+  dev-network:
