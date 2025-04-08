@@ -35,6 +35,9 @@ for app in "${!apps[@]}"; do
     if [[ "$app" == "obsidian" ]]; then
       swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
       swaymsg "[app_id=\"$app\"] floating disable"
+    elif [[ "$app" == "com.github.iwalton3.jellyfin-media-player" ]]; then
+      swaymsg "[app_id=\"$app\"] floating disable"
+      notify-send "jellyfin has been floating disabled"
     else
       swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
     fi
@@ -50,9 +53,14 @@ for app in "${!apps[@]}"; do
     if [[ "$app" == "obsidian" ]]; then
       swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
       swaymsg "[app_id=\"$app\"] floating disable"
+    elif [[ "$app" == "com.github.iwalton3.jellyfin-media-player" ]]; then
+      swaymsg "[app_id=\"$app\"] floating disable"
+      swaymsg "[app_id=\"$app\"] fullscreen disable"
+      notify-send "jellyfin has been floating disabled"
     else
       swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
     fi
+
     echo "Info: $app started and moved to workspace $workspace."
   fi
 done
