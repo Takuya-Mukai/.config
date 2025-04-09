@@ -10,7 +10,7 @@ swaymsg mode "study"
 declare -A apps=(
     ["pomodorolm"]="7"
     ["saber"]="1"
-    ["org.kde.polkit-kde-authentication-agent-1"]="5"
+    # ["org.kde.polkit-kde-authentication-agent-1"]="5"
     ["com.github.iwalton3.jellyfin-media-player"]="8"
     ["obsidian"]="7"
 )
@@ -19,7 +19,7 @@ declare -A apps=(
 declare -A app_exec=(
     ["pomodorolm"]="pomodorolm"
     ["saber"]="saber"
-    ["org.kde.polkit-kde-authentication-agent-1"]="input-remapper-gtk"
+    # ["org.kde.polkit-kde-authentication-agent-1"]="input-remapper-gtk"
     ["com.github.iwalton3.jellyfin-media-player"]="jellyfinmediaplayer"
     ["obsidian"]="obsidian"
 )
@@ -33,12 +33,16 @@ for app in "${!apps[@]}"; do
   if swaymsg -t get_tree | jq -e 'recurse(.nodes[]?, .floating_nodes[]?) | select(.app_id == "'"$app"'" or .scratchpad_state == "hidden")' > /dev/null; then
     # アプリが既に起動している場合
     if [[ "$app" == "obsidian" ]]; then
+      swaymsg "[workspace=\"$workspace\"] move container to workspace number 10"
       swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
       swaymsg "[app_id=\"$app\"] floating disable"
     elif [[ "$app" == "com.github.iwalton3.jellyfin-media-player" ]]; then
+      swaymsg "[workspace=\"$workspace\"] move container to workspace number 10"
+      swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
       swaymsg "[app_id=\"$app\"] floating disable"
       notify-send "jellyfin has been floating disabled"
     else
+      swaymsg "[workspace=\"$workspace\"] move container to workspace number 10"
       swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
     fi
     echo "Info: $app is already running and moved to workspace $workspace."
@@ -51,13 +55,16 @@ for app in "${!apps[@]}"; do
 
     # 起動後にワークスペースに移動
     if [[ "$app" == "obsidian" ]]; then
+      swaymsg "[workspace=\"$workspace\"] move container to workspace number 10"
       swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
       swaymsg "[app_id=\"$app\"] floating disable"
     elif [[ "$app" == "com.github.iwalton3.jellyfin-media-player" ]]; then
+      swaymsg "[workspace=\"$workspace\"] move container to workspace number 10"
+      swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
       swaymsg "[app_id=\"$app\"] floating disable"
       swaymsg "[app_id=\"$app\"] fullscreen disable"
-      notify-send "jellyfin has been floating disabled"
     else
+      swaymsg "[workspace=\"$workspace\"] move container to workspace number 10"
       swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
     fi
 
