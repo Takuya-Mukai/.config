@@ -32,8 +32,6 @@ for app in "${!apps[@]}"; do
   # jq の実行結果を変数に格納し、エラーメッセージを除外する
   if swaymsg -t get_tree | jq -e 'recurse(.nodes[]?, .floating_nodes[]?) | select(.app_id == "'"$app"'" or .scratchpad_state == "hidden")' > /dev/null; then
     # アプリが既に起動している場合
-    swaymsg "[workspace=\"$workspace\"] move container to workspace number 10"
-
     if [[ "$app" == "obsidian" ]]; then
       swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
       swaymsg "[app_id=\"$app\"] floating disable"
@@ -45,11 +43,9 @@ for app in "${!apps[@]}"; do
       swaymsg "[app_id=\"$app\"] move container to workspace number $workspace"
     fi
     echo "Info: $app is already running and moved to workspace $workspace."
-
   else
     # アプリが起動していない場合
     echo "Warning: $app is not running. Starting $exec_name..."
-    swaymsg "[workspace=\"$workspace\"] move container to workspace number 10"
     swaymsg "exec $exec_name"
     sleep 1
 
