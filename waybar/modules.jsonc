@@ -191,11 +191,6 @@
       "on-click": "shutdown now",
       "tooltip-format": "ShutDown",
     },
-    "custom/sleep":{
-      "format": "<span color=\"#C8C093\"> ⏾</span>",
-      "on-click": "swaylock --clock --indicator --screenshots --effect-blur 7x7 --fade-in 0.3",
-      "tooltip-format": "Sleep",
-    },
     "custom/filemanager":{
       "format": "<span color=\"#8ea4a2\">  </span>",
       "on-click": "thunar",
@@ -210,7 +205,6 @@
       "modules": [
         "custom/lock",
         "custom/reboot",
-        "custom/sleep",
         "custom/power",
       ],
       "drawer": {
