@@ -76,6 +76,7 @@
 "jellyfin" = ""
 "pomodorolm" = ""
 "nextcloud" = ""
+"zotero" = ""
 [other]
 fallback_icon = ""
 deduplicate_icons = false
