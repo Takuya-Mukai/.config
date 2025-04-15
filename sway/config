@@ -92,6 +92,7 @@ exec rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov -t 
 exec --no-startup-id obsidian
 exec otd-daemon
 exec_always autotiling
+exec_always nextcloud --background
 ### Input configuration
 #
 # Example configuration:
