@@ -40,7 +40,6 @@
 "mpv" = ""
 "music" = ""
 "disk usage" = ""
-"pdf" = ""
 "thunar" = ""
 "kitty" = ""
 "nm-connection-editor" = ''
@@ -77,6 +76,7 @@
 "pomodorolm" = ""
 "nextcloud" = ""
 "zotero" = ""
+"pdf" = ""
 [other]
 fallback_icon = ""
 deduplicate_icons = false
