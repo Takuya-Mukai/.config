@@ -374,8 +374,6 @@ default_border pixel 2
 for_window [app_id="kitty"] opacity 0.95 sticky enable
 for_window [title="Network Connection"] floating enable, move position center, cursor move up 20
 for_window [app_id="one.alynx.showmethekey" title="Floating Window - Show Me The Key"] floating enable, sticky enable
-for_window [title="btop$"] floating enable, move position center
-for_window [class="PenTablet"] floating enable
 for_window [title="clipse$"] floating enable, move position center, resize set 50ppt 80ppt
 for_window [title="Thunar"] floating enable, resize set 60ppt 70ppt
 for_window [app_id = "blueman-manager"] floating enable
