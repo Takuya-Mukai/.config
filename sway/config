@@ -111,14 +111,14 @@ exec_always nextcloud --background
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-input "1386:827:Wacom_Intuos_S_2_Pen" {
-  map_to_region 0 1145 1080 675
-  rotation_angle 270
-}
 # input "1386:827:Wacom_Intuos_S_2_Pen" {
-#   map_to_region 1080 420 1728 1080
+#   map_to_region 0 1145 1080 675
 #   rotation_angle 270
 # }
+input "1386:827:Wacom_Intuos_S_2_Pen" {
+  map_to_region 1080 420 1728 1080
+  rotation_angle 270
+}
 
 ### Key bindings
 #
