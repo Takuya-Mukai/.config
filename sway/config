@@ -117,9 +117,13 @@ exec ./scripts/wacom.sh
 #   rotation_angle 270
 # }
 # input "1386:827:Wacom_Intuos_S_2_Pen" {
-#   map_to_region 1080 420 1728 1080
+#   map_to_region 0 1145 1080 675
 #   rotation_angle 270
 # }
+input "1386:827:Wacom_Intuos_S_2_Pen" {
+  map_to_region 1080 420 1728 1080
+  rotation_angle 270
+}
 
 ### Key bindings
 #

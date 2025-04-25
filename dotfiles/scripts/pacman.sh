@@ -8,7 +8,7 @@ cd yay
 makepkg -si
 cd ~
 # install essential packages
-yay -S /mnt base base-devel linux linux-firmware linux-headers openssh --noconfirm
+yay -S /mnt base base-devel linux linux-firmware linux-headers openssh less --noconfirm
 # install network and security tools
 yay -S ufw gufw networkmanager nm-connection-editor network-manager-applet bluez bluez-utils blueman wireguard usbutils --noconfirm
 # install other desktop tools
@@ -26,13 +26,13 @@ yay -S fish neovim tmux ripgrep yazi kitty curl texlive npm nodejs lazygit udisk
 # install for neovim
 yay -S metalua penlight luarocks cmake --noconfirm
 # install japanese input and font
-yay -S fcitx5-im fcitx5-cskk skk-jisyo skk-emoji-jisyo noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd otf-font-awesome  --noconfirm
+yay -S fcitx5-im fcitx5-skk skk-jisyo skk-emoji-jisyo noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-firacode-nerd otf-font-awesome  --noconfirm
 # install gui tools
-# yay -S vivaldi vivaldi-ffmpeg-codecs
-yay -S chromium webcord-git btop spotify vlc swayimg obsidian qalculate-gtk thunderbird keypassxc selectdefaultapplication-git showmethekey pamac-aur rnote rustdesk --noconfirm
+yay -S zen-browser-bin google-chrome
+yay -S chromium webcord-git btop spotify vlc swayimg obsidian qalculate-gtk thunderbird keypassxc selectdefaultapplication-git showmethekey pamac-aur saber rustdesk --noconfirm
 
 # install theme
-yay -S catppuccin-gtk-theme-mocha catppuccin-cursors-mocha catppuccin-fcitx5-git papirus-folders-catppuccin-git btop-theme-catppuccin --noconfirm
+yay -S catppuccin-gtk-theme-mocha catppuccin-cursors-mocha fcitx5-gruvbox-dark-theme-git papirus-folders-catppuccin-git btop-theme-catppuccin --noconfirm
 # install theme thunderbird 
 mkdir ~/gitclone
 cd ~/gitclone
@@ -51,12 +51,11 @@ git clone -b v2.1.0 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugin
 yay -S rocm-smi-lib --noconfirm
 # document tool
 yay -S zathura zathura-pdf-mupdf
-# install hyprland
-# yay -S hyprland hyprcursor hyprpaper hyprshot hypridle hyprlock hyprshade thunar clipse --noanswerclean --noanswerdiff
-yay -S sway swaybg scdoc wl-clipboard clipse swaylock-effects-git swayidle sov workstyle nwg-displays swaync autotiling --noconfirm
+yay -S xorg-desktop-portal xorg-dekstop-portal-gtk xdg-desktop-portal-wlr xorg-xauth xorg-xhost xorg-xhost xorg-xwayland xwaylandvideobridge
+yay -S sway swaybg scdoc wl-clipboard clipse swaylock-effects-git swayidle sov workstyle-git nwg-displays swaync autotiling wayvnc kanagawa-gtk-theme-git steamos-compositor-plus --noconfirm
 # install tools for screenshot
 yay -S grim slurp swappy --noconfirm
 # for screen share
 yay -S xdg-desktop-portal-wlr xdg-desktop-portal xwaylandvideobridge --noconfirm
 yay -S syncthing syncthing-gtk syncthingtray xppenlinux3 xorg-xwayland xorg-xhost --noconfirm
-sudo pacman -S timeshift neofetch tailscale ethtool kdeconnect
+sudo yay -S timeshift neofetch tailscale ethtool kdeconnect sherlock nextcloud-client jellyfin-media-player-git --noconfirm

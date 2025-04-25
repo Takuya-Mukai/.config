@@ -2,7 +2,7 @@ XMODIFIERS=@im=fcitx
 QT_IM_MODUE=fcitx
 QT_QPA_PLATFORMTHEME=qt6ct
 EDITOR=nvim
-BROWSER=vivaldi
+BROWSER=zen-browser
 TERMINAL=kitty
 XDG_CONFIG_HOME=/home/muta/.config
 QT_QPA_PLATFORMTHEME=qt5ct
