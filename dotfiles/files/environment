@@ -5,4 +5,3 @@ EDITOR=nvim
 BROWSER=zen-browser
 TERMINAL=kitty
 XDG_CONFIG_HOME=/home/muta/.config
-QT_QPA_PLATFORMTHEME=qt5ct
