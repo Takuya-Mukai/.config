@@ -12,11 +12,9 @@ bottom
 btop
 btrfs-progs
 calibre
-cheese
 clipse
 cmake
 dnslookup
-docker-compose
 dosfstools
 edk2-ovmf
 efibootmgr
@@ -33,7 +31,6 @@ ffmpegthumbnailer
 firefox
 fish
 fzf
-geckodriver
 git
 github-cli
 glib
@@ -47,8 +44,6 @@ gtk-youtube-viewer-git
 gufw
 helvum
 inkscape
-input-remapper-git
-isoimagewriter
 jellyfin-media-player-git
 kanagawa-gtk-theme-git
 kanagawa-icon-theme-git
@@ -107,7 +102,6 @@ qt5ct
 qt6ct
 r-quick-share
 ripgrep
-rnote
 rocm-opencl-runtime
 rocm-smi-lib
 rustdesk
@@ -124,8 +118,6 @@ smartmontools
 sof-firmware
 sov
 spotify
-steam
-steamos-compositor-plus
 swappy
 sway
 sway-audio-idle-inhibit-git
