@@ -10,6 +10,7 @@
 # precedence is given in order of apparition in this file.
 
 # about contents
+"win11" = ""
 "lazygit" = "󰒲"
 "android-file-transfer" = "󰓷"
 "archwiki" = "󰣇"
@@ -77,6 +78,8 @@
 "nextcloud" = ""
 "zotero" = ""
 "pdf" = ""
+"virt-manager" = ""
+"bottles" = ""
 [other]
 fallback_icon = ""
 deduplicate_icons = false

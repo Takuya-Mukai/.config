@@ -1,5 +1,6 @@
 include ./catppuccin-mocha
 include ./kanagawa
+include ./outputs
 # Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -68,14 +69,13 @@ workspace 10 output HDMI-A-1
 # Example configuration:
 #
 exec swayidle -w \
-  timeout 600 'swaylock --clock --indicator --screenshots --effect-blur 7x7 --fade-in 0.3' \
   timeout 1200 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
+  # timeout 600 'swaylock --clock --indicator --screenshots --effect-blur 7x7 --fade-in 0.3' \
   # before-sleep 'swaylock --clock --indicator --screenshots --effect-blur 7x7 --fade-in 0.3'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
-exec bash ~/.config/sway/outputs
 exec fcitx5
 # exec wl-paste --type text --watch clipist store
 # exec wl-paste --type image --watch clipist store
@@ -113,7 +113,7 @@ exec ./scripts/wacom.sh
 # Read `man 5 sway-input` for more information about this section.
 
 input "1386:827:Wacom_Intuos_S_2_Pen" {
-  map_to_region 0 1145 1080 675
+  map_to_region 0 1210 1080 675
   rotation_angle 270
 }
 # input "1386:827:Wacom_Intuos_S_2_Pen" {
