@@ -113,7 +113,7 @@ exec ./scripts/wacom.sh
 # Read `man 5 sway-input` for more information about this section.
 
 input "1386:827:Wacom_Intuos_S_2_Pen" {
-  map_to_region 0 1210 1080 675
+  map_to_region 0 1150 1080 675
   rotation_angle 270
 }
 # input "1386:827:Wacom_Intuos_S_2_Pen" {
