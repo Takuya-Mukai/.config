@@ -132,6 +132,8 @@ input "1386:827:Wacom_Intuos_S_2_Pen" {
     # start obsidian
     bindsym $mod+o exec ~/.config/sway/scripts/obsidian.sh
     bindsym $mod+Ctrl+w exec ~/.config/sway/scripts/waydroid.sh
+    # start memo
+    bindsym $mod+n exec kitty nvim
 
     # Kill focused window
     bindsym $mod+c kill

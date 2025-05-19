@@ -26,6 +26,7 @@ return{
     keys = {
       {'<leader>f', '<leader>ex', mode = 'n'},
     },
+    cmd = 'Telescope',
     config = function() require 'plugins-config.tools.telescope' end,
   },
   {
@@ -53,12 +54,11 @@ return{
   {
     'nvim-tree/nvim-tree.lua',
     config = function() require 'plugins-config.tools.nvim-tree' end,
-    dependencies = { 'nvim-tree/nvim-web-devicons', 'nvim-telescope/telescope.nvim' },
+    dependencies = { 'nvim-tree/nvim-web-devicons'},
     keys = { { '<leader>ex', mode = 'n' } },
   },
   {
     "mikavilpas/yazi.nvim",
-    event = "VeryLazy",
     keys = {
       -- 👇 in this section, choose your own keymappings!
       {
@@ -90,7 +90,7 @@ return{
   },
   {
     'echasnovski/mini.nvim',
-      config = function() require 'plugins-config.tools.mini' end,
+    config = function() require 'plugins-config.tools.mini' end,
   },
   {
     'akinsho/toggleterm.nvim', version = "*",
@@ -99,6 +99,7 @@ return{
   },
   {
     'kevinhwang91/nvim-ufo',
+    event = "BufReadPost",
     dependencies = 'kevinhwang91/promise-async',
     config = function()
       require('plugins-config.tools.nvim-ufo')
@@ -106,6 +107,7 @@ return{
   },
   {
     "CopilotC-Nvim/CopilotChat.nvim",
+    keys = '<leader>c',
     dependencies = {
       { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
       { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
@@ -124,5 +126,6 @@ return{
   },
   {
     "sindrets/diffview.nvim",
+    cmd = { "DiffviewOpen", "DiffviewFileHistory" },
   },
 }

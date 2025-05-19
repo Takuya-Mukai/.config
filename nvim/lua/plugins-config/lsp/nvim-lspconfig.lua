@@ -40,3 +40,34 @@ vim.api.nvim_create_autocmd('LspAttach', {
     })
   end,
 })
+
+require("mason-lspconfig").setup()
+
+local lspconfig = require("lspconfig")
+
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+-- すべてのLSP共通設定
+vim.lsp.set_log_level("info")
+
+-- lua_ls に特化した設定
+lspconfig.lua_ls.setup({
+  capabilities = capabilities,
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" },
+      },
+      workspace = {
+        checkThirdParty = false,
+        library = {
+          vim.env.VIMRUNTIME,
+          "${3rd}/luv/library",
+        },
+      },
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+})

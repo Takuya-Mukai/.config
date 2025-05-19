@@ -23,7 +23,7 @@ return{
   },
   {
     "shellRaining/hlchunk.nvim",
-    -- event = { "BufReadPre", "BufNewFile" },
+    event = "BufReadPost",
     config = function()
       require("hlchunk").setup({
         chunk = {enable = true},
@@ -50,7 +50,6 @@ return{
     lazy = true,
     cmd = "InsertEnter",
     config = function() require 'plugins-config.ui.nvim-navic' end,
-    dependencies = 'neovim/nvim-lspconfig',
   },
   {
     "SmiteshP/nvim-navbuddy",
@@ -64,8 +63,7 @@ return{
   },
   {
     'j-hui/fidget.nvim',
-    opts = {},
-    event = "VimEnter",
+    event = "LspAttach",
     config = function() require 'plugins-config.ui.fidget' end,
   },
   {

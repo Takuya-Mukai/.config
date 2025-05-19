@@ -9,23 +9,22 @@ return {
   {
     'williamboman/mason.nvim',
     dependencies = {
-      'hrsh7th/cmp-nvim-lsp',
+      -- 'hrsh7th/cmp-nvim-lsp',
       'williamboman/mason-lspconfig.nvim',
       {
         'neovim/nvim-lspconfig',
         config = function() require 'plugins-config.lsp.nvim-lspconfig' end,
-        verylazy=true,
+        event = "BufReadPre",
       },
     },
-    lazy = true,
-    -- cmd = {
-    --   "Mason",
-    --   "MasonInstall",
-    --   "MasonUninstall",
-    --   "MasonUninstallAll",
-    --   "MasonLog",
-    --   "MasonUpdate",
-    -- },
+    cmd = {
+      "Mason",
+      "MasonInstall",
+      "MasonUninstall",
+      "MasonUninstallAll",
+      "MasonLog",
+      "MasonUpdate",
+    },
     config = function() require 'plugins-config.lsp.mason' end,
   },
   {
@@ -45,10 +44,10 @@ return {
       handlers = {}
     },
   },
-  {
-    'WhoIsSethDaniel/mason-tool-installer.nvim',
-    dependencies = 'williamboman/mason.nvim',
-    config = function() require 'plugins-config.lsp.mason-tool-installer' end,
-    -- lazy=true,
-  }
+  -- {
+  --   'WhoIsSethDaniel/mason-tool-installer.nvim',
+  --   dependencies = 'williamboman/mason.nvim',
+  --   config = function() require 'plugins-config.lsp.mason-tool-installer' end,
+  --   -- lazy=true,
+  -- }
 }

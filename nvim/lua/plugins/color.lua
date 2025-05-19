@@ -14,11 +14,12 @@ return{
       'rebelot/kanagawa.nvim',
     },
     config = function() require 'plugins-config.color.rainbow-delimiters' end,
+    event = "BufReadPre",
   },
   {
     "nvim-treesitter/nvim-treesitter",
+    event = "BufReadPost",
     config = function() require 'plugins-config.color.nvim-treesitter' end,
     build = ":TSUpdate",
-    dependencies = {'rebelot/kanagawa.nvim'},
   },
 }

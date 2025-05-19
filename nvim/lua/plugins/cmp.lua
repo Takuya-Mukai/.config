@@ -1,25 +1,25 @@
 return{
-    {
+  {
     "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
+    event = { "InsertEnter", "CmdlineEnter" },
     config = function() require 'plugins-config.cmp.nvim-cmp' end,
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
-      dependencies =
-      {
+      event = { "InsertEnter", "CmdlineEnter"},
+      dependencies = {
         {
           'L3MON4D3/LuaSnip',
-          version = 'v2.*',
           build = 'make install_jsregexp',
           config = function() require 'plugins-config.cmp.luasnip' end,
-          dependencies = { 'saadparwaiz1/cmp_luasnip', 'rafamadriz/friendly-snippets' }
+          dependencies = { 'saadparwaiz1/cmp_luasnip', 'rafamadriz/friendly-snippets' },
+          event = "InsertEnter",
         },
         {
           'zbirenbaum/copilot-cmp',
           dependencies = 'copilot.lua',
           config = function() require('copilot_cmp').setup() end,
-          lazy = true,
           cmd = "CS",
+          event = "InsertEnter",
         },
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-path',
@@ -31,7 +31,7 @@ return{
   },
   {
     "zbirenbaum/copilot.lua",
-    lazy = true,
+    event = "InsertEnter",
     config = function()
       require("plugins-config.cmp.copilot")
     end,

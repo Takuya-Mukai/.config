@@ -25,3 +25,7 @@ vim.g.rainbow_delimiters = {
         'RainbowDelimiterCyan',
     },
 }
+
+vim.defer_fn(function()
+  vim.cmd("doautocmd BufReadPost")
+end, 50)
