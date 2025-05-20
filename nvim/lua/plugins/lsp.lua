@@ -10,7 +10,13 @@ return {
     'williamboman/mason.nvim',
     dependencies = {
       -- 'hrsh7th/cmp-nvim-lsp',
-      'williamboman/mason-lspconfig.nvim',
+      {
+        'williamboman/mason-lspconfig.nvim',
+        config = function()
+          require("mason-lspconfig").setup()
+        end,
+        event = "VimEnter",
+      },
       {
         'neovim/nvim-lspconfig',
         config = function() require 'plugins-config.lsp.nvim-lspconfig' end,

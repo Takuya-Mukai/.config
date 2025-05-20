@@ -5,13 +5,14 @@ return{
     config = function()
       require 'plugins-config.ui.nvim-hlslens'
     end,
+    event = "CmdlineEnter",
   },
   {
     'petertriho/nvim-scrollbar',
     config = function ()
       require 'plugins-config.ui.nvim-scrollbar'
     end,
-    event = "BufEnter",
+    event = "BufReadPre",
   },
   {
     'lewis6991/gitsigns.nvim',

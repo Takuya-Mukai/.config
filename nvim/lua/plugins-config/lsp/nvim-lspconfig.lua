@@ -41,8 +41,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-require("mason-lspconfig").setup()
-
 local lspconfig = require("lspconfig")
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()

@@ -14,7 +14,7 @@ return{
       'rebelot/kanagawa.nvim',
     },
     config = function() require 'plugins-config.color.rainbow-delimiters' end,
-    event = "BufReadPre",
+    event = "VimEnter",
   },
   {
     "nvim-treesitter/nvim-treesitter",
