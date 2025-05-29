@@ -88,12 +88,11 @@ exec /usr/bin/kdeconnectd
 exec sway-audio-idle-inhibit
 exec ./scripts/optimize4ExitNode.sh
 exec nm-applet --sm-disable &
-exec_always .scripts/wayvnc_server.sh
+exec .scripts/wayvnc_server.sh
 exec rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov -t 500
 exec --no-startup-id obsidian
-exec otd-daemon
-exec_always autotiling
-exec_always nextcloud --background
+exec autotiling
+exec nextcloud --background
 exec ./scripts/wacom.sh
 ### Input configuration
 #
