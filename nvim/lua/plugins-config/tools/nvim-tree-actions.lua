@@ -120,4 +120,3 @@ function M.on_attach(bufnr)
 end
 
 return M
-

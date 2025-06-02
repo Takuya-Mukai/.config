@@ -1,7 +1,7 @@
 require("toggleterm").setup({
   open_mapping = [[<leader>tt]],
   shade_terminals = true,
-  shading_factor = 1,
+  shading_factor = 0.5,
   direction = "float",
   size = vim.o.columns * 0.4,
   float_opts = {

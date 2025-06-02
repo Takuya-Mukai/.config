@@ -1,6 +1,6 @@
 require('nvim-treesitter.configs').setup({
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query" , "python", 'json', "cpp", "bash", },
+  ensure_installed = { "c", "lua", "vimdoc", "query" , "python", 'json', "cpp", "bash", },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -12,8 +12,37 @@ require('nvim-treesitter.configs').setup({
   -- List of parsers to ignore installing (or "all")
   ignore_install = {},
 
+  indent = {
+    enable = true,
+  },
+  autotag = {
+    enable = true,
+  },
   ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
   -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
+  textobjects = {
+    select = {
+      enable = true,
+      lookasides = true, -- より多くの言語で利用可能にする
+      -- キーマッピングの例
+      -- 詳細は `:h nvim-treesitter-textobjects-select` を参照
+      -- vim.keymap.set('n', 'af', '@function.outer', { desc = 'around function' })
+      -- vim.keymap.set('n', 'if', '@function.inner', { desc = 'inner function' })
+    },
+    swap = {
+      enable = true,
+      -- キーマッピングの例
+      -- vim.keymap.set('n', '<leader>sa', '@parameter.outer', { desc = 'swap around parameter' })
+      -- vim.keymap.set('n', '<leader>si', '@parameter.inner', { desc = 'swap inner parameter' })
+    },
+    move = {
+      enable = true,
+      set_jumps = true, -- 移動履歴をジャンプリストに記録
+      -- キーマッピングの例
+      -- vim.keymap.set('n', '[c', '@class.outer', { desc = 'prev class' })
+      -- vim.keymap.set('n', ']c', '@class.next', { desc = 'next class' })
+    },
+  },
 
   highlight = {
     enable = true,
@@ -25,11 +54,11 @@ require('nvim-treesitter.configs').setup({
 --    disable = {},
     -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
     disable = function(lang, buf)
-        local max_filesize = 100 * 1024 -- 100 KB
-        local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-        if ok and stats and stats.size > max_filesize then
-            return true
-        end
+      local max_filesize = 100 * 1024 -- 100 KB
+      local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+      if ok and stats and stats.size > max_filesize then
+        return true
+      end
     end,
 
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.

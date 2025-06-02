@@ -7,10 +7,12 @@ cmp.setup {
   window = {
     documentation = {
       border = {'╭', '─', '╮', '│', '╯', '─', '╰', '│'},
+      winblend = 30,
     },
     completion = {
       border = {'┌', '─', '┐', '│', '┘', '─', '└', '│'},
       winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None',
+      winblend = 30,
     }
   },
 
@@ -49,12 +51,6 @@ cmp.setup {
     expand = function(args)
       luasnip.lsp_expand(args.body)
     end, },
-    cmp.setup.cmdline({ '/', '?' }, {
-    mapping = cmp.mapping.preset.cmdline(),
-    sources = {
-      { name = 'buffer' }
-    }
-  })
 }
 cmp.setup.cmdline({ '/', '?' }, {
   mapping = cmp.mapping.preset.cmdline(),
