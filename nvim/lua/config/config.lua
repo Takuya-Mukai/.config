@@ -10,9 +10,9 @@ vim.bo.shiftwidth = 2      -- 自動インデントの幅を2スペースに設�
 vim.bo.expandtab = true    -- タブキーでスペースを挿入する
 vim.bo.softtabstop = 2     -- Backspaceでタブストップ単位で削除する際に使用 (expandtabと組み合わせると便利)
 -- ポップアップメニューの透明度
-vim.opt.pumblend = 0
+vim.opt.pumblend = 20
 -- ウィンドウの透明度
-vim.opt.winblend = 100
+vim.opt.winblend = 20
 -- 現在のモード（INSERT, NORMALなど）を表示しない
 vim.opt.showmode = false
 -- 現在行にカーソルラインを表示しない

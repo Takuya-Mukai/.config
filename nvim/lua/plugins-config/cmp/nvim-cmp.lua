@@ -7,12 +7,12 @@ cmp.setup {
   window = {
     documentation = {
       border = {'╭', '─', '╮', '│', '╯', '─', '╰', '│'},
-      winblend = 30,
+      winblend = 20,
     },
     completion = {
       border = {'┌', '─', '┐', '│', '┘', '─', '└', '│'},
       winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None',
-      winblend = 30,
+      winblend = 20,
     }
   },
 

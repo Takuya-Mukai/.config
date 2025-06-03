@@ -38,7 +38,7 @@ output * bg ~/.config/sway/backgrounds/Small-memory-sunrise.jpg fill
 
 # archdesk
 # output DP-1 resolution 1920x1080 position 0,0 transform 270
-# output HDMI-A-1 resolution 1920x1080 position 1080,420 
+# output HDMI-A-1 resolution 1920x1080 position 1080,420
 # output DP-2 resolution 1920x1080 position 1080,1500
 workspace 1 output DP-1
 workspace 2 output DP-1
@@ -161,7 +161,9 @@ input "1386:827:Wacom_Intuos_S_2_Pen" {
 
   # custom settings
   bindsym $mod+Shift+v exec kitty clipse
-  bindsym $mod+F12 exec exec ./scripts/wacom.sh
+  bindsym $mod+F12 exec ./scripts/wacom.sh
+  bindsym $mod+t exec --no-startup-id ~/.config/sway/scripts/translate_en.sh
+  bindsym $mod+Shift+t exec --no-startup-id ~/.config/sway/scripts/translate_ja.sh
 #
 # Moving around:
 #
@@ -419,5 +421,12 @@ for_window [app_id="input-remapper-gtk"] floating enable
 # for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
 # for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
 # for_window [title="^Steam Keyboard$"] floating enable
-
+# Kittyの翻訳スクラッチパッドウィンドウ
+# app_id="translation_kitty" は後でスクリプトで指定します
+for_window [app_id="translation_kitty"] floating enable
+# ウィンドウの幅と高さ
+for_window [app_id="translation_kitty"] resize set 800px 400px
+# 画面中央に配置
+for_window [app_id="translation_kitty"] move position center
+# これによりスクラッチパッドに送られる
 include /etc/sway/config.d/*
