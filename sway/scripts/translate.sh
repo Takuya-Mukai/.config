@@ -31,7 +31,7 @@ elif [[ "$MIMETYPE" == "image/png" || "$MIMETYPE" == "image/jpeg" || "$MIMETYPE"
   if [[ -s "$IMAGE_TMPFILE" ]]; then
     # Tesseract で OCR 処理
     # 出力は標準出力に、日本語と英語を認識
-    OCR_RAW_OUTPUT=$(tesseract "$IMAGE_TMPFILE" stdout -l jpn+eng+ell 2>/dev/null)
+    OCR_RAW_OUTPUT=$(tesseract "$IMAGE_TMPFILE" stdout -l jpn+eng+tha+ell 2>/dev/null)
 
     if [[ -n "$OCR_RAW_OUTPUT" ]]; then
 
@@ -106,6 +106,9 @@ case "$SELECTED_LANG" in
     ;;
   "en")
     LANGUAGE="English -"
+    ;;
+  "th")
+    LANGUAGE="Thai ----"
 esac
 
 translated_text=$(trans -brief -noconfirm -no-warn-empty :$SELECTED_LANG "$CLEANED_TEXT" 2>/dev/null)
@@ -122,6 +125,8 @@ fi
 translated_text=$(echo "$translated_text" | sed 's/-noconfirm//g')
 # 最初の行に "-NoConfirm" がある場合も引き続き削除
 translated_text=$(echo "$translated_text" | sed '1{/^ *\-NoConfirm/d;}')
+translated_text=$(echo "$translated_text" | sed '1{/^ *\-Noconfirm/d;}')
+translated_text=$(echo "$translated_text" | sed '1{/^ *\-noConfirm/d;}')
 # 空白行を削除する（オプション）
 translated_text=$(echo "$translated_text" | sed '/^$/d')
 # 先頭と末尾の空白をトリムする（オプション）

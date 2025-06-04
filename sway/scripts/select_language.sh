@@ -12,11 +12,13 @@ fi
 # あなたのスクリプトから抜粋した言語選択部分
 echo "1) Japanese (ja)"
 echo "2) English  (en)"
+echo "3) Thai     (th)"
 read -p "Enter number (Default=1): " CHOICE
 
 case "$CHOICE" in
     1) SELECTED_LANG="ja" ;;
     2) SELECTED_LANG="en" ;;
+    3) SELECTED_LANG="th" ;;
     *)
       echo "Invalid choice. Defaulting to Japanese (ja)." > /dev/stderr
         SELECTED_LANG="ja" # 無効な場合は空を返す
