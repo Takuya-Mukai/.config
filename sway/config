@@ -162,8 +162,7 @@ input "1386:827:Wacom_Intuos_S_2_Pen" {
   # custom settings
   bindsym $mod+Shift+v exec kitty clipse
   bindsym $mod+F12 exec ./scripts/wacom.sh
-  bindsym $mod+t exec --no-startup-id ~/.config/sway/scripts/translate_en.sh
-  bindsym $mod+Shift+t exec --no-startup-id ~/.config/sway/scripts/translate_ja.sh
+  bindsym $mod+t exec --no-startup-id ~/.config/sway/scripts/translate.sh
 #
 # Moving around:
 #
@@ -425,8 +424,14 @@ for_window [app_id="input-remapper-gtk"] floating enable
 # app_id="translation_kitty" は後でスクリプトで指定します
 for_window [app_id="translation_kitty"] floating enable
 # ウィンドウの幅と高さ
-for_window [app_id="translation_kitty"] resize set 800px 400px
+for_window [app_id="translation_kitty"] resize set 35ppt 70ppt
 # 画面中央に配置
 for_window [app_id="translation_kitty"] move position center
+
+for_window [app_id="select_language"] floating enable
+# ウィンドウの幅と高さ
+for_window [app_id="select_language"] resize set 17ppt 10ppt
+# 画面中央に配置
+for_window [app_id="select_language"] move position center
 # これによりスクラッチパッドに送られる
 include /etc/sway/config.d/*
