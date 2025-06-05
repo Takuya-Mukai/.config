@@ -177,6 +177,10 @@ input "1386:827:Wacom_Intuos_S_2_Pen" {
   bindsym $mod+Up focus up
   bindsym $mod+Right focus right
 
+  # Move focus to the next or previous workspace
+  # bindsym $mod+Shift+minus move workspace prev
+  # bindsym $mod+Shift+equal move workspace next
+
   # Move the focused window with the same, but add Shift
   bindsym $mod+Shift+$left move left
   bindsym $mod+Shift+$down move down
@@ -187,6 +191,7 @@ input "1386:827:Wacom_Intuos_S_2_Pen" {
   bindsym $mod+Shift+Down move down
   bindsym $mod+Shift+Up move up
   bindsym $mod+Shift+Right move right
+#
 # Workspaces:
 #
   # Switch to workspace
