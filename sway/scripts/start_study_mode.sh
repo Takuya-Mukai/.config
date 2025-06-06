@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # 勉強時間を入力させる (時間単位)
-read -p "Enter the study time here: " study_time
+read -p "How long will you focus? " study_time
 
 # Study Mode に切り替え
-swaymsg mode "study"
+swaymsg mode "focus"
 
 # アプリケーションとワークスペースの対応
 declare -A apps=(
     ["pomodorolm"]="7"
-    ["saber"]="1"
+    # ["saber"]="1"
     # ["org.kde.polkit-kde-authentication-agent-1"]="5"
     ["com.github.iwalton3.jellyfin-media-player"]="8"
     ["obsidian"]="7"
@@ -18,7 +18,7 @@ declare -A apps=(
 # アプリケーションの起動コマンド名の対応
 declare -A app_exec=(
     ["pomodorolm"]="pomodorolm"
-    ["saber"]="saber"
+    # ["saber"]="saber"
     # ["org.kde.polkit-kde-authentication-agent-1"]="input-remapper-gtk"
     ["com.github.iwalton3.jellyfin-media-player"]="jellyfinmediaplayer"
     ["obsidian"]="obsidian"
