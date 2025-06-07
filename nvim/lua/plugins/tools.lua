@@ -139,4 +139,34 @@ return{
       })
     end,
   },
+  -- {
+  --   'VonHeikemen/fine-cmdline.nvim',
+  --   dependencies = {
+  --     {'MunifTanjim/nui.nvim'},
+  --     {'hrsh7th/nvim-cmp'},
+  --     {'hrsh7th/cmp-cmdline'},
+  --   },
+  --   config = function()
+  --     vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
+  --     require('fine-cmdline').setup({
+  --       -- ここに fine-cmdline の設定を記述
+  --       -- 例えば、デフォルトの表示方法の変更など
+  --       -- cmdline_popup = {
+  --       --   enabled = true,
+  --       --   position = 'center', -- または 'center'
+  --       --   size = { width = 0.8, height = 0.8 },
+  --       -- },
+  --       hooks = {
+  --         -- 補完ポップアップが開いた時に、fine-cmdline の補完機能を有効にする
+  --         -- nvim-cmp との連携がスムーズに行われるためのフック
+  --         on_cmdline_enter = function()
+  --           vim.api.nvim_set_option_value("cmdheight", 0, { scope = "global" })
+  --         end,
+  --         on_cmdline_leave = function()
+  --           vim.api.nvim_set_option_value("cmdheight", 1, { scope = "global" })
+  --         end,
+  --       },
+  --     })
+  --   end,
+  -- },
 }

@@ -4,11 +4,15 @@ vim.opt.termguicolors = true
 vim.wo.number = true
 -- 構文ハイライトを有効にする
 vim.cmd("syntax enable")
--- タブとインデントの設定
+vim.bo.autoindent = true
+vim.bo.smartindent = true -- プログラミングをするなら便利- タブとインデントの設定
 vim.bo.tabstop = 2         -- タブ文字の幅を2スペースに設定
 vim.bo.shiftwidth = 2      -- 自動インデントの幅を2スペースに設定
 vim.bo.expandtab = true    -- タブキーでスペースを挿入する
 vim.bo.softtabstop = 2     -- Backspaceでタブストップ単位で削除する際に使用 (expandtabと組み合わせると便利)
+vim.opt.updatetime = 300 -- 300ミリ秒に設定 (デフォルトは4000ミリ秒)
+vim.opt.swapfile = false
+vim.opt.whichwrap = "b,s,<,>,[,]"
 -- ポップアップメニューの透明度
 vim.opt.pumblend = 20
 -- ウィンドウの透明度
@@ -20,7 +24,8 @@ vim.wo.cursorline = false
 -- 現在行からの相対行番号を表示
 vim.wo.relativenumber = true
 -- スクロールオフセット（カーソルが画面の端から何行離れたらスクロールするか）
-vim.wo.scrolloff = 5
+vim.wo.scrolloff = 13
+vim.wo.sidescrolloff = 12
 -- 検索時に大文字小文字を区別しない
 vim.o.ignorecase = true
 -- 検索文字列に大文字が含まれる場合のみ大文字小文字を区別する

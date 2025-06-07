@@ -63,9 +63,12 @@ cmp.setup.cmdline({ '/', '?' }, {
 cmp.setup.cmdline(':', {
   mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
-    { name = 'path' }
-  }, {
-    { name = 'cmdline' }
+    -- 優先度が高いソースを先に記述
+    { name = 'cmdline', option = { completion = { 'command', 'file', 'dir', 'alias', 'function' } } },
+    { name = 'cmdline_history' }, -- コマンド履歴も追加すると便利
+    { name = 'path' },            -- ファイルパス補完（cmdlineの'file','dir'と重複する場合もあるが、より強力なことが多い）
+    -- 必要に応じて他のソースも追加
+    -- 例: { name = 'buffer' } -- バッファ内の単語補完
   }),
   matching = { disallow_symbol_nonprefix_matching = false }
 })
