@@ -438,5 +438,6 @@ for_window [app_id="select_language"] floating enable
 for_window [app_id="select_language"] resize set 17ppt 10ppt
 # 画面中央に配置
 for_window [app_id="select_language"] move position center
+for_window [class="Google-chrome" title="^Messenger"] floating disable
 # これによりスクラッチパッドに送られる
 include /etc/sway/config.d/*
