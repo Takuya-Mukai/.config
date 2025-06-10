@@ -109,3 +109,4 @@ scribus/
 sway/outputs
 sway/workspaces
 nvim/lazy-lock.json
+tigervnc/

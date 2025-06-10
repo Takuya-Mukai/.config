@@ -95,6 +95,8 @@ exec autotiling
 exec nextcloud --background
 exec ~/.config/sway/scripts/wacom.sh
 exec ~/.config/sway/scripts/start.sh
+exec_always --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec_always --no-startup-id systemctl --user start xdg-desktop-portal-wlr
 ### Input configuration
 #
 # Example configuration:
@@ -352,7 +354,7 @@ mode "focus" {
 }
 
 # Keybinding to start Study Mode (example: $mod+Shift+s)
-bindsym $mod+Shift+s exec "kitty --class floating-study-terminal -e ~/.config/sway/scripts/study_mode.sh"
+bindsym $mod+Shift+s exec "kitty --override background_opacity=0.83 --class floating-study-terminal -e ~/.config/sway/scripts/study_mode.sh"
 
 #
 # Status Bar:
@@ -446,6 +448,9 @@ for_window [app_id="select_language"] floating enable
 for_window [app_id="select_language"] resize set 17ppt 10ppt
 # 画面中央に配置
 for_window [app_id="select_language"] move position center
+for_window [app_id="floating-study-terminal"] move position center
+for_window [app_id="floating-study-terminal"] floating enable, resize set 30ppt 30ppt
+
 
 ## fix workspace
 for_window [class="Google-chrome" title="^Messenger"] floating disable, move workspace number 1
