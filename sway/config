@@ -93,7 +93,8 @@ exec rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov -t 
 exec --no-startup-id obsidian
 exec autotiling
 exec nextcloud --background
-exec ./scripts/wacom.sh
+exec ~/.config/sway/scripts/wacom.sh
+exec ~/.config/sway/scripts/start.sh
 ### Input configuration
 #
 # Example configuration:
@@ -351,7 +352,7 @@ mode "focus" {
 }
 
 # Keybinding to start Study Mode (example: $mod+Shift+s)
-bindsym $mod+Shift+s exec "kitty --class floating-study-terminal -e ~/.config/sway/scripts/start_study_mode.sh"
+bindsym $mod+Shift+s exec "kitty --class floating-study-terminal -e ~/.config/sway/scripts/study_mode.sh"
 
 #
 # Status Bar:
@@ -427,6 +428,13 @@ for_window [app_id="input-remapper-gtk"] floating enable
 # for_window [title="^Steam Keyboard$"] floating enable
 # Kittyの翻訳スクラッチパッドウィンドウ
 # app_id="translation_kitty" は後でスクリプトで指定します
+
+for_window [app_id="kitty_shutdown"] floating enable
+# ウィンドウの幅と高さ
+for_window [app_id="kitty_shutdown"] resize set 18ppt 10ppt
+# 画面中央に配置
+for_window [app_id="kitty_shutdown"] move position center
+
 for_window [app_id="translation_kitty"] floating enable
 # ウィンドウの幅と高さ
 for_window [app_id="translation_kitty"] resize set 35ppt 70ppt
@@ -438,6 +446,8 @@ for_window [app_id="select_language"] floating enable
 for_window [app_id="select_language"] resize set 17ppt 10ppt
 # 画面中央に配置
 for_window [app_id="select_language"] move position center
-for_window [class="Google-chrome" title="^Messenger"] floating disable
+
+## fix workspace
+for_window [class="Google-chrome" title="^Messenger"] floating disable, move workspace number 1
 # これによりスクラッチパッドに送られる
 include /etc/sway/config.d/*

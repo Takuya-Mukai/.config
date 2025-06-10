@@ -130,7 +130,7 @@
       "format-muted": "<span color= \"#727169\"> </span>",
       "on-click": "pavucontrol",
       "format-icons": ["<span color= \"#c4746e\">  </span>", "<span color= \"#c4746e\">  </span>", "<span color= \"#c4746e\">   </span>"],
-      "recerse-scrolling": 1, 
+      "recerse-scrolling": 1,
     },
     "custom/spotify": {
       "format": "{icon} {}",
@@ -188,7 +188,7 @@
     },
     "custom/power":{
       "format": "<span color=\"#c4746e\">  </span>",
-      "on-click": "shutdown now",
+      "on-click": "kitty --class kitty_shutdown --override background_opacity=0.83 ~/.config/waybar/shutdown.sh",
       "tooltip-format": "ShutDown",
     },
     "custom/filemanager":{
