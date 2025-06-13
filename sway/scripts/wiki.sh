@@ -15,13 +15,11 @@ if [ -z "$TERM_TO_LOOKUP" ]; then
     notify_error "クリップボードが空です。検索する単語をコピーしてください。"
 fi
 
-# kitty で wiki-tui を起動し、Wikipedia 記事を表示するコマンド
 # wiki-tui は自動で最適な記事を検索するはず
 # -l ja は日本語版Wikipediaを指定
-# --title は kitty のウィンドウタイトルを設定
 # bash -c '...': ターミナル内で実行するコマンド
 # read -p "...": wiki-tui 終了後、Enterキーが押されるまでターミナルを閉じない
-TERM_CMD="kitty --class wiki_popup --title \"Wikipedia: ${TERM_TO_LOOKUP}\" bash -c 'wiki-tui -l ja \"$TERM_TO_LOOKUP\"; read -p \"閉じるにはEnterキーを押してください...\"'"
+TERM_CMD="foot -a wiki_popup bash -c 'wiki-tui -l ja \"$TERM_TO_LOOKUP\"; read -p \"閉じるにはEnterキーを押してください...\"'"
 
 # Sway でターミナルを起動
 swaymsg exec "$TERM_CMD" &

@@ -1,19 +1,24 @@
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
-
 local map = cmp.mapping
 
 cmp.setup {
   window = {
-    documentation = {
-      border = {'╭', '─', '╮', '│', '╯', '─', '╰', '│'},
-      winblend = 20,
-    },
-    completion = {
-      border = {'┌', '─', '┐', '│', '┘', '─', '└', '│'},
-      winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None',
-      winblend = 20,
-    }
+    completion = cmp.config.window.bordered({
+      border = 'single'
+    }),
+    documentation = cmp.config.window.bordered({
+      border = 'single'
+    }),
+    -- documentation = {
+    --   border = {'╭', '─', '╮', '│', '╯', '─', '╰', '│'},
+    --   winblend = 20,
+    -- },
+    -- completion = {
+    --   border = {'┌', '─', '┐', '│', '┘', '─', '└', '│'},
+    --   winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None',
+    --   winblend = 20,
+    -- }
   },
 
   formatting = {

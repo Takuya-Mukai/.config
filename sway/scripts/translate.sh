@@ -81,15 +81,15 @@ mkdir -p "$FIFO_DIR" || { notify-send "Error" "Could not create temporary direct
 mkfifo "$FIFO_PATH" || { notify-send "Error" "Could not create FIFO."; exit 1; }
 
 echo "FIFO created at: $FIFO_PATH"
-echo "Opening new kitty window for language selection..."
+echo "Opening new terminal window for language selection..."
 
 # 3. 別のkittyウィンドウを開き、言語選択スクリプトを実行
 # select_language.sh に FIFO_PATH を引数として渡す
-kitty --class=select_language --override background_opacity=0.88 \
+foot -a=select_language \
   bash -c "$HOME/.config/sway/scripts/select_language.sh \"$FIFO_PATH\"" &
 
 # 4. メインスクリプトはFIFOからの言語入力を待機
-echo "Waiting for language selection from the other kitty window..."
+echo "Waiting for language selection from the other terminal window..."
 SELECTED_LANG=$(cat "$FIFO_PATH") # FIFOから読み込むまでブロックされる
 
 if [ -z "$SELECTED_LANG" ]; then
@@ -140,5 +140,5 @@ display_text="---------- Original ----------\n$CLEANED_TEXT\n\n---------- $LANGU
 temp_file=$(mktemp)
 echo -e "$display_text" > "$temp_file"
 
-# Kitty起動（app-id指定、永続するためにcat）
-kitty --class=translation_kitty --override background_opacity=0.88 bash -c "cat $temp_file; echo -e '\n\nPress Enter to close'; read"
+# terminal起動（app-id指定、永続するためにcat）
+alacritty --class=translation_kitty -e bash -c "cat $temp_file; echo -e '\n\nPress Enter to close'; read"

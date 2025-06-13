@@ -17,7 +17,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty
+set $term foot
 # set $browser vivaldi --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime %U
 set $browser zen-browser
 
@@ -134,9 +134,8 @@ input "1386:827:Wacom_Intuos_S_2_Pen" {
   bindsym $mod+Ctrl+w exec ~/.config/sway/scripts/waydroid.sh
   # start memo
   bindsym $mod+n exec env INSERT_CREATED_HEADER=1 \
-  kitty --class nvimfloat \
-    --override background_opacity=0.83 \
-    --directory=$HOME/Documents/Obsidian/01_Inbox/_Memo \
+  foot -a nvimfloat \
+    --working-directory=$HOME/Documents/Obsidian/01_Inbox/_Memo \
     nvim $(date +%Y%m%d%H%M).md
   for_window [app_id="nvimfloat"] floating enable, move position center,  resize set 30ppt 60ppt
 
@@ -161,7 +160,7 @@ input "1386:827:Wacom_Intuos_S_2_Pen" {
   bindsym $mod+Shift+n exec swaynv-client -t -sw
 
   # custom settings
-  bindsym $mod+Shift+v exec kitty clipse
+  bindsym $mod+Shift+v exec foot clipse
   bindsym $mod+F12 exec ./scripts/wacom.sh
   bindsym $mod+t exec --no-startup-id ~/.config/sway/scripts/translate.sh
   bindsym $mod+Shift+w exec ~/.config/sway/scripts/wiki.sh
@@ -353,7 +352,7 @@ mode "focus" {
 }
 
 # Keybinding to start Study Mode (example: $mod+Shift+s)
-bindsym $mod+Shift+s exec "kitty --override background_opacity=0.83 --class floating-study-terminal -e ~/.config/sway/scripts/study_mode.sh"
+bindsym $mod+Shift+s exec "foot -a floating-study-terminal ~/.config/sway/scripts/study_mode.sh"
 
 #
 # Status Bar:

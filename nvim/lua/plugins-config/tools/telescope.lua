@@ -1,6 +1,7 @@
 require('telescope').setup {
   lazy = true,
   defaults = {
+    borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
     mappings = {
       i = {
         ['<C-h>'] = 'which_key',
