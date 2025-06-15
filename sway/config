@@ -76,7 +76,7 @@ exec swaync
 exec_always --no-startup-id workstyle &> /tmp/workstyle.log
 exec /usr/lib/polkit-kde-authentication-agent-1
 exec /usr/bin/kdeconnectd
-exec sway-audio-idle-inhibit
+# exec sway-audio-idle-inhibit
 exec ./scripts/optimize4ExitNode.sh
 exec nm-applet --sm-disable &
 exec_always ~/.config/sway/scripts/wayvnc_server.sh
@@ -86,7 +86,7 @@ exec autotiling
 exec nextcloud --background
 exec ~/.config/sway/scripts/wacom.sh
 exec ~/.config/sway/scripts/start.sh
-exec_always ~/.config/sway/scripts/workspace_screenshot_manager
+# exec_always ~/.config/sway/scripts/screenshot_daemon
 ### Input configuration
 #
 # Example configuration:
@@ -156,7 +156,7 @@ input "1386:827:Wacom_Intuos_S_2_Pen" {
   bindsym $mod+F12 exec ./scripts/wacom.sh
   bindsym $mod+t exec --no-startup-id ~/.config/sway/scripts/translate.sh
   bindsym $mod+Shift+w exec ~/.config/sway/scripts/wiki.sh
-  bindsym $mod+m exec ~/.config/sway/scripts/workspace_screenshot_viewer
+  # bindsym $mod+m exec ~/.config/sway/scripts/screenshot_viewer
 #
 # Moving around:
 #
@@ -443,8 +443,8 @@ for_window [app_id="floating-study-terminal"] move position center
 for_window [app_id="floating-study-terminal"] floating enable, resize set 30ppt 30ppt
 
 
-for_window [class="SwayWorkspaceNavigator"] floating enable
+for_window [title="Sway Workspace Viewer"] floating enable, move position center
 ## fix workspace
-for_window [class="Google-chrome" title="^Messenger"] floating disable, move workspace number 1
+for_window [class="Google-chrome" title="^Messenger"] floating disable
 # これによりスクラッチパッドに送られる
 include /etc/sway/config.d/*

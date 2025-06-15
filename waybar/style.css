@@ -5,7 +5,7 @@
   font-size: 10.0pt;
   color: @oldWhite;
   border-radius: 0;
-  
+
 }
 
 /* main waybar */
@@ -23,7 +23,7 @@ tooltip {
 #workspaces button {
   padding: 1px 5px;
   border: none;
-  transition: all 0.2s ease-in-out; 
+  transition: all 0.2s ease-in-out;
 }
 
 /* workspace style now in */
@@ -103,7 +103,7 @@ tooltip {
 
 /* Hide window module when not focused on window or empty workspace */
 window#waybar.empty #window {
-  padding: 0px;       
+  padding: 0px;
   margin: 0px;
   opacity: 0;
 }
@@ -150,4 +150,7 @@ window#waybar.empty #window {
   border-radius: 10px 0px 0px 10px;
   padding-right: 5px;
   padding-left: 5px;
+}
+#custom-waybar-media.paused {
+    color: grey;
 }

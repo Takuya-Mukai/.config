@@ -60,12 +60,12 @@
     },
     "cpu": {
         "format": "<span color=\"#a292a3\">  </span>{usage}%",
-        "on-click": "kitty --config background_opacity=0.65 btop"
+        "on-click": "foot btop"
     },
     "memory": {
         "format": "<span color=\"#8a9a7b\"> </span>{used}GiB",
         "tooltip": false,
-        "on-click": "kitty --config background_opacity=0.65 btop"
+        "on-click": "foot btop"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -74,7 +74,7 @@
         "format": "<span color=\"#8ba4b0\"> </span>{temperatureC}°C",
         "format-critical": "<span color=\"#c4746e\"> </span>{temperatureC}°C",
         "tooltip": false,
-        "on-click": "kitty --config background_opacity=0.65 btop"
+        "on-click": "foot btop"
     },
     "group/pcinfo": {
       "modules": [
@@ -127,9 +127,9 @@
     //},
     "wireplumber": {
       "format": "{icon}{volume}%",
-      "format-muted": "<span color= \"#727169\"> </span>",
+      "format-muted": "<span color= \"#727169\">   </span>",
       "on-click": "pavucontrol",
-      "format-icons": ["<span color= \"#c4746e\">  </span>", "<span color= \"#c4746e\">  </span>", "<span color= \"#c4746e\">   </span>"],
+      "format-icons": ["<span color= \"#c4746e\">    </span>", "<span color= \"#c4746e\">    </span>", "<span color= \"#c4746e\">     </span>"],
       "recerse-scrolling": 1,
     },
     "custom/spotify": {
@@ -188,7 +188,7 @@
     },
     "custom/power":{
       "format": "<span color=\"#c4746e\">  </span>",
-      "on-click": "kitty --class kitty_shutdown --override background_opacity=0.83 ~/.config/waybar/shutdown.sh",
+      "on-click": "foot ~/.config/waybar/shutdown.sh",
       "tooltip-format": "ShutDown",
     },
     "custom/filemanager":{
@@ -200,6 +200,14 @@
       "format": "<span color=\"#8ea4a2\">  </span>",
       "on-click": "nwg-drawer",
       "tooltip-format": "drawer",
+    },
+    "custom/waybar-media": {
+      "return-type": "json",
+      "exec": "waybar-media.py status  ",
+      "on-click": "waybar-media.py playpause",
+      "on-scroll-up": "waybar-media.py previous",
+      "on-scroll-down": "waybar-media.py next",
+      "escape": true
     },
     "group/group-power":{
       "modules": [

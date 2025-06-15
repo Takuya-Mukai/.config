@@ -27,6 +27,7 @@
         //"mpd",
         //"power-profiles-daemon",
         //"pulseaudio",
+        "custom/waybar-media",
         "wireplumber",
         "group/pcinfo",
         //"custom/power",
